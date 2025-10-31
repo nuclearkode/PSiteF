@@ -2,13 +2,25 @@
 import Image from 'next/image';
 import { useI18n } from '@/hooks/useI18n';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
+import { cn } from '@/lib/utils';
+import { useRef } from 'react';
 
 export default function About() {
   const { t } = useI18n();
   const avatar = PlaceHolderImages.find(img => img.id === 'about-avatar');
+  const sectionRef = useRef<HTMLElement>(null);
+  const isVisible = useIntersectionObserver(sectionRef, { threshold: 0.2 });
 
   return (
-    <section id="about" className="relative z-[1]">
+    <section 
+      id="about" 
+      ref={sectionRef}
+      className={cn(
+        "relative z-[1] opacity-0 transition-opacity duration-700 ease-out",
+        isVisible && "animate-fade-in-up"
+      )}
+    >
       <div className="section-inner max-w-[1280px] mx-auto py-16 px-gutter">
         <h2 className="section-title font-headline text-[clamp(32px,6vw,64px)] tracking-[.06em] uppercase text-accent-dark mb-4 leading-none">{t('abt')}</h2>
         <div className="grid grid-cols-1 lg:grid-cols-[1.2fr,1fr] gap-5">

@@ -103,12 +103,23 @@ export default {
           '70%': { transform: 'translate(0%, 15%)' },
           '80%': { transform: 'translate(3%, 35%)' },
           '90%': { transform: 'translate(-10%, 10%)' },
+        },
+        'fade-in-up': {
+          '0%': {
+            opacity: '0',
+            transform: 'translateY(20px)'
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'translateY(0)'
+          },
         }
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
         'grain': 'grain 7s steps(10) infinite',
+        'fade-in-up': 'fade-in-up 0.8s ease-out forwards',
       },
       spacing: {
         'gutter': 'clamp(1rem, 5vw, 7.5rem)',
