@@ -5,7 +5,7 @@ export default function Footer() {
   const { t } = useI18n();
 
   return (
-    <footer className="site mt-10 py-8 px-gutter pb-16 border-t border-white/5 max-w-[1280px] mx-auto flex items-center justify-between gap-4 flex-wrap">
+    <footer className="site py-8 px-gutter pb-16 border-t border-white/5 max-w-[1280px] mx-auto flex items-center justify-between gap-4 flex-wrap">
       <span>A Project by Ahmed Badawy</span>
       <div className="social-links flex gap-4">
         <a href="https://linkedin.com/in/ahmed-badwy" target="_blank" rel="noopener">LinkedIn</a>
