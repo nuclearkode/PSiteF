@@ -51,7 +51,7 @@ export default function Projects() {
   return (
     <section 
       id="projects" 
-      className="relative z-[1] pt-20 pb-10"
+      className="relative z-[1] pt-20 pb-16"
     >
       <div className="section-inner max-w-[1280px] mx-auto px-gutter">
         <h2 className="section-title font-headline text-[clamp(32px,6vw,64px)] tracking-[.06em] uppercase text-accent-dark mb-4 leading-none">{t('projects')}</h2>
