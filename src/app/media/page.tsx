@@ -29,7 +29,7 @@ const mediaItems = [
   {
     titleKey: 'media_burnaby_now_title',
     descriptionKey: 'media_burnaby_now_desc',
-    imageUrl: 'https://picsum.photos/seed/media3/600/400',
+    imageUrl: 'https://i.imgur.com/8PAQ2oZ.png',
     imageHint: 'newspaper article',
     links: [],
   },
