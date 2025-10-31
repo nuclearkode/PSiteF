@@ -1,3 +1,124 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-avatar",
+      "description": "Portrait of Ahmed Badawy",
+      "imageUrl": "https://images.unsplash.com/photo-1561740303-a0fd9fabc646?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwb3J0cmFpdCUyMHBlcnNvbnxlbnwwfHx8fDE3NjE4NDAyNjZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "portrait person"
+    },
+    {
+      "id": "carousel-marine",
+      "description": "Marine hull brush",
+      "imageUrl": "https://images.unsplash.com/photo-1754297813357-ef2ca0f4163d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx1bmRlcndhdGVyJTIwcm9ib3R8ZW58MHx8fHwxNzYxODczODA4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "underwater robot"
+    },
+    {
+      "id": "carousel-pcb",
+      "description": "STM32 PCB",
+      "imageUrl": "https://images.unsplash.com/photo-1631375937044-6dd5beac01d2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjaXJjdWl0JTIwYm9hcmR8ZW58MHx8fHwxNzYxNzg3MTc5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "circuit board"
+    },
+    {
+      "id": "carousel-encoder",
+      "description": "Encoder",
+      "imageUrl": "https://images.unsplash.com/photo-1576020363294-ab5dca00b6f8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtZWNoYW5pY2FsJTIwcGFydHxlbnwwfHx8fDE3NjE4NzM4MDh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "mechanical part"
+    },
+    {
+      "id": "carousel-hopper",
+      "description": "Hopper",
+      "imageUrl": "https://images.unsplash.com/photo-1718294054516-69cfe295a955?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxpbmR1c3RyaWFsJTIwbWFjaGluZXxlbnwwfHx8fDE3NjE3NTE2NjB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "industrial machine"
+    },
+    {
+      "id": "carousel-plow",
+      "description": "Snow plow",
+      "imageUrl": "https://images.unsplash.com/photo-1623265296891-8d9cd8856839?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzbm93JTIwcGxvd3xlbnwwfHx8fDE3NjE4NzM4MDl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "snow plow"
+    },
+    {
+      "id": "carousel-ai",
+      "description": "AI tool",
+      "imageUrl": "https://images.unsplash.com/photo-1761599821310-da0d6356b4f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxhYnN0cmFjdCUyMGNvZGV8ZW58MHx8fHwxNzYxODY2NDEzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "abstract code"
+    },
+    {
+      "id": "proj-marine-3d",
+      "description": "Marine vehicle 3D model",
+      "imageUrl": "https://images.unsplash.com/photo-1651611243377-2c15b94ad613?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHwzZCUyMHJlbmRlcnxlbnwwfHx8fDE3NjE4NzM1NDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "3d render"
+    },
+    {
+      "id": "proj-marine-2d",
+      "description": "Marine vehicle schematic",
+      "imageUrl": "https://images.unsplash.com/photo-1712697236422-cf48f06547f1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxzY2hlbWF0aWMlMjBibHVlcHJpbnR8ZW58MHx8fHwxNzYxODczODA4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "schematic blueprint"
+    },
+    {
+      "id": "proj-pcb-3d",
+      "description": "STM32 board render",
+      "imageUrl": "https://images.unsplash.com/photo-1697577418970-95d99b5a55cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjaXJjdWl0JTIwYm9hcmR8ZW58MHx8fHwxNzYxNzg3MTc5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "circuit board"
+    },
+    {
+      "id": "proj-pcb-2d",
+      "description": "STM32 schematic",
+      "imageUrl": "https://images.unsplash.com/photo-1758873268104-965363987972?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8ZGlhZ3JhbSUyMHNjaGVtYXRpY3xlbnwwfHx8fDE3NjE4NzM4MDh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "diagram schematic"
+    },
+    {
+      "id": "proj-8051-3d",
+      "description": "DC motor controller",
+      "imageUrl": "https://images.unsplash.com/photo-1723730741647-caaea47ac90f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxkYyUyMG1vdG9yfGVufDB8fHx8MTc2MTg3MzgwOHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "dc motor"
+    },
+    {
+      "id": "proj-8051-2d",
+      "description": "7-segment multiplexing schematic",
+      "imageUrl": "https://images.unsplash.com/photo-1730578726303-c9a4c0ae02c4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxlbGVjdHJvbmljcyUyMGRpYWdyYW18ZW58MHx8fHwxNzYxODczODA4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "electronics diagram"
+    },
+    {
+      "id": "proj-labview-3d",
+      "description": "Automation line",
+      "imageUrl": "https://images.unsplash.com/photo-1717386255773-a456c611dc4e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxmYWN0b3J5JTIwYXV0b21hdGlvbnxlbnwwfHx8fDE3NjE4NzM4MDh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "factory automation"
+    },
+    {
+      "id": "proj-labview-2d",
+      "description": "GUI flows",
+      "imageUrl": "https://images.unsplash.com/photo-1545112969-bdd91ef544c7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxmbG93Y2hhcnQlMjB1aXxlbnwwfHx8fDE3NjE4NzM4MDl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "flowchart ui"
+    },
+    {
+      "id": "proj-plow-3d",
+      "description": "Custom snow plow 3d model",
+      "imageUrl": "https://images.unsplash.com/photo-1631779203044-05c13796991c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx2ZWhpY2xlJTIwc25vd3xlbnwwfHx8fDE3NjE4NzM4MDh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "vehicle snow"
+    },
+    {
+      "id": "proj-plow-2d",
+      "description": "Fabrication drawings",
+      "imageUrl": "https://images.unsplash.com/photo-1721244653506-1d9253e3e227?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxibHVlcHJpbnQlMjBkcmF3aW5nfGVufDB8fHx8MTc2MTc2MzMxN3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "blueprint drawing"
+    },
+    {
+      "id": "proj-diagram-3d",
+      "description": "Diagram Weaver UI",
+      "imageUrl": "https://images.unsplash.com/photo-1545235617-7a424c1a60cc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8dWklMjBkZXNpZ258ZW58MHx8fHwxNzYxODA3MzU5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "ui design"
+    },
+    {
+      "id": "proj-diagram-2d",
+      "description": "System architecture diagram",
+      "imageUrl": "https://images.unsplash.com/photo-1721244654346-9be0c0129e36?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxhcmNoaXRlY3R1cmUlMjBkaWFncmFtfGVufDB8fHx8MTc2MTg0MDI2M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "architecture diagram"
+    },
+    {
+      "id": "about-avatar",
+      "description": "Portrait of Ahmed Badawy",
+      "imageUrl": "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjE3NTYzNjF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man portrait"
+    }
+  ]
 }

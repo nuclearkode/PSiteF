@@ -10,8 +10,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        body: ['Inter', 'sans-serif'],
-        headline: ['Inter', 'sans-serif'],
+        body: ['Manrope', 'sans-serif'],
+        headline: ['Space Grotesk', 'sans-serif'],
         code: ['monospace'],
       },
       colors: {
@@ -40,6 +40,7 @@ export default {
         accent: {
           DEFAULT: 'hsl(var(--accent))',
           foreground: 'hsl(var(--accent-foreground))',
+          dark: 'hsl(var(--accent-dark))'
         },
         destructive: {
           DEFAULT: 'hsl(var(--destructive))',
@@ -70,6 +71,9 @@ export default {
         lg: 'var(--radius)',
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)',
+        '4xl': '2rem',
+        '5xl': '2.5rem',
+        '6xl': '3rem',
       },
       keyframes: {
         'accordion-down': {
@@ -88,11 +92,29 @@ export default {
             height: '0',
           },
         },
+        grain: {
+          '0%, 100%': { transform: 'translate(0, 0)' },
+          '10%': { transform: 'translate(-5%, -10%)' },
+          '20%': { transform: 'translate(-15%, 5%)' },
+          '30%': { transform: 'translate(7%, -25%)' },
+          '40%': { transform: 'translate(-5%, 25%)' },
+          '50%': { transform: 'translate(-15%, 10%)' },
+          '60%': { transform: 'translate(15%, 0%)' },
+          '70%': { transform: 'translate(0%, 15%)' },
+          '80%': { transform: 'translate(3%, 35%)' },
+          '90%': { transform: 'translate(-10%, 10%)' },
+        }
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+        'grain': 'grain 7s steps(10) infinite',
       },
+      spacing: {
+        'gutter': 'clamp(1rem, 5vw, 7.5rem)',
+        'top': 'clamp(5.25rem, 10vh, 11.25rem)',
+        'proj-gap': '4.5rem',
+      }
     },
   },
   plugins: [require('tailwindcss-animate')],
