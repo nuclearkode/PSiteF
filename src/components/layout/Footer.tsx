@@ -6,7 +6,7 @@ export default function Footer() {
 
   return (
     <footer className="site mt-20 py-8 px-gutter pb-16 border-t border-white/5 max-w-[1280px] mx-auto flex items-center justify-between gap-4 flex-wrap">
-      <span>{t('copyright')}</span>
+      <span>A Project by Ahmed Badawy</span>
       <div className="social-links flex gap-4">
         <a href="https://linkedin.com/in/ahmed-badwy" target="_blank" rel="noopener">LinkedIn</a>
         <a href="mailto:Ahmed_Badwy@sfu.ca">Email</a>

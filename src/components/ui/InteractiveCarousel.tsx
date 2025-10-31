@@ -4,7 +4,6 @@ import { useRef, useEffect, useState, useCallback } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { cn } from '@/lib/utils';
 
 type CarouselItem = {
   id: string;
@@ -18,121 +17,144 @@ type InteractiveCarouselProps = {
 };
 
 export default function InteractiveCarousel({ items }: InteractiveCarouselProps) {
-  const ringRef = useRef<HTMLDivElement>(null);
-  const velocity = useRef(0);
-  const rafRef = useRef<number>();
+  const [activeIndex, setActiveIndex] = useState(Math.floor(items.length / 2));
+  const wrapperRef = useRef<HTMLDivElement>(null);
   const isDragging = useRef(false);
   const startX = useRef(0);
-  const currentX = useRef(0);
+  const initialRotation = useRef(0);
+  const currentRotation = useRef(0);
+  const velocity = useRef(0);
+  const rafRef = useRef<number>();
 
-  const setTransform = useCallback((x: number) => {
-    if (ringRef.current) {
-      ringRef.current.style.transform = `translateX(${x}px)`;
+  const rotationAngle = 360 / items.length;
+
+  const updateRotation = () => {
+    if (wrapperRef.current) {
+      wrapperRef.current.style.transform = `translateZ(-300px) rotateY(${currentRotation.current}deg)`;
     }
-  }, []);
+  };
 
   const momentumLoop = useCallback(() => {
-    currentX.current += velocity.current;
-    velocity.current *= 0.95;
-    
-    // Boundary checks
-    if (ringRef.current) {
-      const parentWidth = ringRef.current.parentElement?.clientWidth || 0;
-      const ringWidth = ringRef.current.scrollWidth || 0;
-      const maxScroll = 0;
-      const minScroll = -(ringWidth - parentWidth);
+    currentRotation.current += velocity.current;
+    velocity.current *= 0.9; // Friction
 
-      if (currentX.current > maxScroll) {
-        currentX.current = maxScroll;
-        velocity.current = 0;
-      }
-      if (currentX.current < minScroll) {
-        currentX.current = minScroll;
-        velocity.current = 0;
-      }
-    }
+    // Snap to nearest item
+    if (Math.abs(velocity.current) < 0.1 && !isDragging.current) {
+      const nearestIndex = Math.round(-currentRotation.current / rotationAngle);
+      const targetRotation = -nearestIndex * rotationAngle;
+      
+      // Animate the snap
+      const snapAnimation = () => {
+        const diff = targetRotation - currentRotation.current;
+        if (Math.abs(diff) < 0.1) {
+          currentRotation.current = targetRotation;
+          setActiveIndex((items.length - (nearestIndex % items.length)) % items.length);
+          updateRotation();
+          if (rafRef.current) cancelAnimationFrame(rafRef.current);
+          return;
+        }
+        currentRotation.current += diff * 0.1;
+        updateRotation();
+        rafRef.current = requestAnimationFrame(snapAnimation);
+      };
+      snapAnimation();
 
-    setTransform(currentX.current);
-    if (Math.abs(velocity.current) > 0.5) {
+    } else {
+      updateRotation();
       rafRef.current = requestAnimationFrame(momentumLoop);
     }
-  }, [setTransform]);
+  }, [rotationAngle, items.length]);
 
   const onDown = useCallback((e: React.MouseEvent | React.TouchEvent) => {
-    isDragging.current = true;
-    startX.current = ('touches' in e ? e.touches[0].clientX : e.clientX) - currentX.current;
-    if (ringRef.current) ringRef.current.style.cursor = 'grabbing';
     if (rafRef.current) cancelAnimationFrame(rafRef.current);
+    isDragging.current = true;
+    startX.current = 'touches' in e ? e.touches[0].clientX : e.clientX;
+    initialRotation.current = currentRotation.current;
+    if (wrapperRef.current) wrapperRef.current.style.cursor = 'grabbing';
   }, []);
 
   const onMove = useCallback((e: MouseEvent | TouchEvent) => {
     if (!isDragging.current) return;
-    const x = ('touches' in e ? e.touches[0].clientX : e.clientX) - startX.current;
-    velocity.current = x - currentX.current;
-    currentX.current = x;
-    setTransform(currentX.current);
-  }, [setTransform]);
+    const clientX = 'touches' in e ? e.touches[0].clientX : e.clientX;
+    const dx = clientX - startX.current;
+    
+    const newRotation = initialRotation.current + (dx / window.innerWidth) * 180;
+    velocity.current = newRotation - currentRotation.current;
+    currentRotation.current = newRotation;
+    updateRotation();
+  }, []);
 
   const onUp = useCallback(() => {
     isDragging.current = false;
-    if (ringRef.current) ringRef.current.style.cursor = 'grab';
+    if (wrapperRef.current) wrapperRef.current.style.cursor = 'grab';
     rafRef.current = requestAnimationFrame(momentumLoop);
   }, [momentumLoop]);
 
-  const onWheel = useCallback((e: WheelEvent) => {
-    e.preventDefault();
-    if(rafRef.current) cancelAnimationFrame(rafRef.current);
-    const delta = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY;
-    currentX.current -= delta;
-    setTransform(currentX.current);
-    rafRef.current = requestAnimationFrame(momentumLoop);
-  }, [setTransform, momentumLoop]);
+  const handleWheel = useCallback((e: WheelEvent) => {
+    if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) {
+        e.preventDefault();
+        if (rafRef.current) cancelAnimationFrame(rafRef.current);
+        velocity.current -= e.deltaX * 0.1;
+        rafRef.current = requestAnimationFrame(momentumLoop);
+    }
+  }, [momentumLoop]);
 
   useEffect(() => {
-    const ring = ringRef.current;
-    const parent = ring?.parentElement;
-    
-    if (ring) {
-      ring.addEventListener('mousedown', onDown as EventListener);
-      ring.addEventListener('touchstart', onDown as EventListener, { passive: true });
+    const el = wrapperRef.current?.parentElement;
+    if (el) {
+        el.addEventListener('mousedown', onDown as unknown as EventListener);
+        el.addEventListener('touchstart', onDown as unknown as EventListener, { passive: true });
+        el.addEventListener('wheel', handleWheel, { passive: false });
+
+        window.addEventListener('mousemove', onMove);
+        window.addEventListener('touchmove', onMove, { passive: true });
+        window.addEventListener('mouseup', onUp);
+        window.addEventListener('touchend', onUp);
     }
-    if (parent) {
-      parent.addEventListener('wheel', onWheel, { passive: false });
-    }
-    
-    window.addEventListener('mousemove', onMove);
-    window.addEventListener('touchmove', onMove, { passive: true });
-    window.addEventListener('mouseup', onUp);
-    window.addEventListener('touchend', onUp);
 
     return () => {
-      if (ring) {
-        ring.removeEventListener('mousedown', onDown as EventListener);
-        ring.removeEventListener('touchstart', onDown as EventListener);
-      }
-      if(parent) {
-        parent.removeEventListener('wheel', onWheel);
-      }
-      
-      window.removeEventListener('mousemove', onMove);
-      window.removeEventListener('touchmove', onMove);
-      window.removeEventListener('mouseup', onUp);
-      window.removeEventListener('touchend', onUp);
-      
-      if (rafRef.current) cancelAnimationFrame(rafRef.current);
-    };
-  }, [onDown, onMove, onUp, onWheel]);
+        if(el) {
+            el.removeEventListener('mousedown', onDown as unknown as EventListener);
+            el.removeEventListener('touchstart', onDown as unknown as EventListener);
+            el.removeEventListener('wheel', handleWheel);
+        }
+        window.removeEventListener('mousemove', onMove);
+        window.removeEventListener('touchmove', onMove);
+        window.removeEventListener('mouseup', onUp);
+        window.removeEventListener('touchend', onUp);
+        if (rafRef.current) {
+            cancelAnimationFrame(rafRef.current);
+        }
+    }
+  }, [onDown, onMove, onUp, handleWheel]);
   
   return (
-    <div className="carousel h-full grid grid-cols-1" role="region" aria-roledescription="carousel" aria-label="3D Objects">
-        <div 
-            ref={ringRef} 
-            className="ring relative h-full flex gap-4 p-4 cursor-grab"
-        >
-          {items.map((item) => {
-            const image = PlaceHolderImages.find(img => img.id === item.imgId);
-            return (
-              <Link key={item.id} className="card flex-[0_0_clamp(240px,42%,420px)] h-full rounded-3xl bg-black/10 border border-white/20 grid grid-rows-[1fr_auto] overflow-hidden transition-transform duration-200 ease-in-out hover:scale-[1.02]" href={`#${item.id}`}>
+    <div className="scene h-full w-full" style={{ perspective: '1000px' }}>
+      <div 
+        ref={wrapperRef}
+        className="carousel-wrapper h-full w-full relative cursor-grab"
+        style={{ transformStyle: 'preserve-3d' }}
+      >
+        {items.map((item, index) => {
+          const image = PlaceHolderImages.find(img => img.id === item.imgId);
+          const angle = rotationAngle * index;
+          const isActive = index === activeIndex;
+
+          return (
+            <div
+              key={item.id}
+              className="carousel-item absolute w-[300px] h-[400px] left-[50%] top-[50%] -ml-[150px] -mt-[200px] transition-transform duration-500 ease-in-out"
+              style={{ transform: `rotateY(${angle}deg) translateZ(300px)` }}
+            >
+              <Link 
+                className="card block w-full h-full rounded-3xl bg-black/10 border border-white/20 grid grid-rows-[1fr_auto] overflow-hidden transition-all duration-300 ease-in-out"
+                href={`#${item.id}`}
+                style={{
+                  transform: isActive ? 'scale(1.1)' : 'scale(0.9)',
+                  opacity: isActive ? 1 : 0.6,
+                  boxShadow: isActive ? '0 10px 30px rgba(0,0,0,0.3)' : 'none'
+                }}
+              >
                 <div className="media-slot relative">
                   {image && (
                     <Image
@@ -147,9 +169,10 @@ export default function InteractiveCarousel({ items }: InteractiveCarouselProps)
                 </div>
                 <div className="desc p-3 text-sm bg-black/20 border-t border-white/10 text-white">{item.text}</div>
               </Link>
-            );
-          })}
-        </div>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }

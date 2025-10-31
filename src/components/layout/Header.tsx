@@ -28,6 +28,12 @@ export default function Header() {
         <span className="brand-dot w-3 h-3 rounded-full bg-[#78ffd1] shadow-[0_0_12px_rgba(120,255,209,0.6)]"></span>
         <span>{t('brand')}</span>
       </Link>
+      <nav className='nav-main hidden md:flex items-center gap-2'>
+        <Link href="#projects" className='px-3 py-1.5 text-sm font-medium hover:text-foreground/80 transition-colors'>{t('proj')}</Link>
+        <Link href="#experience" className='px-3 py-1.5 text-sm font-medium hover:text-foreground/80 transition-colors'>{t('exp')}</Link>
+        <Link href="#about" className='px-3 py-1.5 text-sm font-medium hover:text-foreground/80 transition-colors'>{t('abt')}</Link>
+        <Link href="/media" className='px-3 py-1.5 text-sm font-medium hover:text-foreground/80 transition-colors'>{t('media')}</Link>
+      </nav>
       <div className="header-actions flex gap-2.5 items-center mr-4">
         <ThemeToggle />
         <LangToggle />

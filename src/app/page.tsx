@@ -1,3 +1,4 @@
+'use client';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
@@ -7,6 +8,7 @@ import Experience from '@/components/sections/Experience';
 import Resources from '@/components/sections/Resources';
 import About from '@/components/sections/About';
 import Media from '@/components/sections/Media';
+import Resume from '@/components/sections/Resume';
 
 export default function Home() {
   return (
@@ -20,6 +22,7 @@ export default function Home() {
         <Resources />
         <About />
         <Media />
+        <Resume />
       </main>
       <Footer />
     </>
