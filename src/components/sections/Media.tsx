@@ -11,7 +11,7 @@ export default function Media() {
         <div className="content-card bg-card rounded-4xl p-[clamp(18px,2.2vw,28px)] border-2 border-white/10 shadow-[0_30px_60px_rgba(0,0,0,0.35)] ring-1 ring-inset ring-white/5">
           <p>{t('mediaDesc')}</p>
           <div className="btn-row flex gap-3 flex-wrap mt-3">
-            <Link className="btn" href="/resume.pdf" target="_blank" rel="noopener">{t('openPdf')}</Link>
+            <Link className="btn" href="/media" >{t('ctaMedia')}</Link>
             <a className="btn" href="/resume.pdf" download>{t('download')}</a>
           </div>
         </div>

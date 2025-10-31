@@ -3,8 +3,20 @@
     {
       "id": "hero-avatar",
       "description": "Portrait of Ahmed Badawy",
-      "imageUrl": "https://images.unsplash.com/photo-1561740303-a0fd9fabc646?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwb3J0cmFpdCUyMHBlcnNvbnxlbnwwfHx8fDE3NjE4NDAyNjZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://storage.googleapis.com/aifire-423419.appspot.com/uploads/ahmed-badawy-new.png?alt=media&token=c1a3b37a-77e1-4c19-90d1-0f7e8b6b1f2b",
       "imageHint": "portrait person"
+    },
+    {
+      "id": "carousel-aerospace",
+      "description": "Aerospace engineering concept",
+      "imageUrl": "https://images.unsplash.com/photo-1683498372259-236b2317b282?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxhZXJvc3BhY2UlMjBlbmdpbmVlcmluZ3xlbnwwfHx8fDE3MjE4NTE1Njd8MA&ixlib=rb-4.0.3&q=80&w=1080",
+      "imageHint": "aerospace engineering"
+    },
+    {
+      "id": "carousel-humanoid",
+      "description": "Humanoid robot concept",
+      "imageUrl": "https://images.unsplash.com/photo-1678410023478-522615a9c97b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxodW1hbm9pZCUyMHJvYm90fGVufDB8fHx8MTcyMTg1MTU2N3ww&ixlib=rb-4.0.3&q=80&w=1080",
+      "imageHint": "humanoid robot"
     },
     {
       "id": "carousel-marine",
@@ -23,18 +35,6 @@
       "description": "Encoder",
       "imageUrl": "https://images.unsplash.com/photo-1576020363294-ab5dca00b6f8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtZWNoYW5pY2FsJTIwcGFydHxlbnwwfHx8fDE3NjE4NzM4MDh8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "mechanical part"
-    },
-    {
-      "id": "carousel-hopper",
-      "description": "Hopper",
-      "imageUrl": "https://images.unsplash.com/photo-1718294054516-69cfe295a955?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxpbmR1c3RyaWFsJTIwbWFjaGluZXxlbnwwfHx8fDE3NjE3NTE2NjB8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "industrial machine"
-    },
-    {
-      "id": "carousel-plow",
-      "description": "Snow plow",
-      "imageUrl": "https://images.unsplash.com/photo-1623265296891-8d9cd8856839?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzbm93JTIwcGxvd3xlbnwwfHx8fDE3NjE4NzM4MDl8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "snow plow"
     },
     {
       "id": "proj-marine-3d",
@@ -99,7 +99,7 @@
     {
       "id": "about-avatar",
       "description": "Portrait of Ahmed Badawy",
-      "imageUrl": "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjE3NTYzNjF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://storage.googleapis.com/aifire-423419.appspot.com/uploads/ahmed-badawy-new.png?alt=media&token=c1a3b37a-77e1-4c19-90d1-0f7e8b6b1f2b",
       "imageHint": "man portrait"
     }
   ]

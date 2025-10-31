@@ -1,7 +1,7 @@
 export function NoiseBackground() {
   return (
     <div
-      className="noise fixed inset-[-300%_-150%_auto_auto] h-[600%] w-[600%] animate-grain opacity-20 pointer-events-none z-[-3]"
+      className="noise fixed inset-[-300%_-150%_auto_auto] h-[600%] w-[600%] animate-grain opacity-20 pointer-events-none z-[-1]"
       style={{
         backgroundSize: '200px',
         backgroundRepeat: 'repeat',

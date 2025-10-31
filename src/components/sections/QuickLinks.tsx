@@ -9,7 +9,7 @@ export default function QuickLinks() {
     { href: '#resources', labelKey: 'res' },
     { href: '#projects', labelKey: 'proj' },
     { href: '#about', labelKey: 'abt' },
-    { href: '#resume', labelKey: 'cv' },
+    { href: '#media', labelKey: 'media' },
   ];
 
   return (

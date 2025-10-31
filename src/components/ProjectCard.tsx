@@ -16,6 +16,7 @@ const findImage = (id: string) => PlaceHolderImages.find(img => img.id === id);
 export default function ProjectCard({ id, titleKey, descriptionKey, image1Id, image2Id, link, t }: ProjectCardProps) {
   const image1 = findImage(image1Id);
   const image2 = findImage(image2Id);
+  const descriptionHtml = t(descriptionKey);
 
   return (
     <article className="project-block grid gap-4 mb-proj-gap" id={id}>
@@ -38,9 +39,11 @@ export default function ProjectCard({ id, titleKey, descriptionKey, image1Id, im
       <div className="content-card bg-card rounded-4xl p-[clamp(18px,2.2vw,28px)] border-2 border-white/10 shadow-[0_30px_60px_rgba(0,0,0,0.35)] ring-1 ring-inset ring-white/5">
         <div className="card-head flex items-baseline justify-between gap-3">
           <h3 className="uppercase tracking-[.06em] mb-1.5 text-accent-dark font-headline">{t(titleKey)}</h3>
-          <a className="visit-link font-extrabold text-sm opacity-90 border border-white/10 p-2 rounded-xl transition-transform hover:-translate-y-0.5 hover:bg-white/5 whitespace-nowrap" href={link} target="_blank" rel="noopener">Check it out ↗</a>
+          {link !== '#' && (
+            <a className="visit-link font-extrabold text-sm opacity-90 border border-white/10 p-2 rounded-xl transition-transform hover:-translate-y-0.5 hover:bg-white/5 whitespace-nowrap" href={link} target="_blank" rel="noopener">Check it out ↗</a>
+          )}
         </div>
-        <p className="leading-relaxed" dangerouslySetInnerHTML={{ __html: t(descriptionKey) }}></p>
+        <div className="prose prose-sm prose-headings:text-foreground/80 prose-h4:mb-1 prose-h4:mt-3 prose-p:my-1 prose-p:text-muted-foreground" dangerouslySetInnerHTML={{ __html: descriptionHtml }}></div>
       </div>
     </article>
   );

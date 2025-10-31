@@ -14,7 +14,7 @@ export default function About() {
         <div className="grid grid-cols-1 lg:grid-cols-[1.2fr,1fr] gap-5">
           <div className="content-card bg-card rounded-4xl p-[clamp(18px,2.2vw,28px)] border-2 border-white/10 shadow-[0_30px_60px_rgba(0,0,0,0.35)] ring-1 ring-inset ring-white/5">
             <h3 className="font-headline">Ahmed Badawy</h3>
-            <p className="mt-2 leading-relaxed">{t('aboutP')}</p>
+            <p className="mt-2 leading-relaxed" dangerouslySetInnerHTML={{ __html: t('aboutP') }}></p>
           </div>
           <div className="content-card flex items-center justify-center bg-card rounded-4xl p-[clamp(18px,2.2vw,28px)] border-2 border-white/10 shadow-[0_30px_60px_rgba(0,0,0,0.35)] ring-1 ring-inset ring-white/5">
             {avatar && (
