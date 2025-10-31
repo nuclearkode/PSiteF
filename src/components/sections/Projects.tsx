@@ -1,7 +1,7 @@
 'use client';
 import { useI18n } from '@/hooks/useI18n';
 import ProjectCard from '@/components/ProjectCard';
-import { Cog, Cpu, Gamepad2, CircuitBoard } from 'lucide-react';
+import { Cog, Cpu, Gamepad2, CircuitBoard, Binary } from 'lucide-react';
 import React from 'react';
 
 const projectsData = [
@@ -54,7 +54,7 @@ const projectsData = [
 
 const categories = {
   ai: { icon: Cpu, label: 'AI' },
-  controls: { icon: Gamepad2, label: 'Controls' },
+  controls: { icon: Binary, label: 'Controls' },
   electronics: { icon: CircuitBoard, label: 'Electronics' },
   mechanical: { icon: Cog, label: 'Mechanical' },
 };

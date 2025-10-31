@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { useI18n } from '@/hooks/useI18n';
 import RadialMenu from '@/components/ui/RadialMenu';
 import { useState } from 'react';
-import { Cpu, Gamepad2, CircuitBoard, Cog } from 'lucide-react';
+import { Cpu, Binary, CircuitBoard, Cog } from 'lucide-react';
 
 export default function QuickLinks() {
   const { t } = useI18n();
@@ -18,7 +18,7 @@ export default function QuickLinks() {
 
   const projectCategories = [
     { id: 'ai', label: 'AI', icon: Cpu, href: '#projects-ai' },
-    { id: 'controls', label: 'Controls', icon: Gamepad2, href: '#projects-controls' },
+    { id: 'controls', label: 'Controls', icon: Binary, href: '#projects-controls' },
     { id: 'electronics', label: 'Electronics', icon: CircuitBoard, href: '#projects-electronics' },
     { id: 'mechanical', label: 'Mechanical', icon: Cog, href: '#projects-mechanical' },
   ];
