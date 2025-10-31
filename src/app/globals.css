@@ -122,10 +122,10 @@
 @layer utilities {
   .content-card {
     @apply shadow-[0_20px_40px_rgba(0,0,0,0.2)];
-    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+    transition: box-shadow 0.3s ease-out;
   }
   .content-card:hover {
-      @apply -translate-y-1.5 shadow-[0_35px_60px_-15px_rgba(0,0,0,0.35)];
+      @apply shadow-[0_35px_60px_-15px_rgba(0,0,0,0.35)];
   }
   .header-scrolled {
     @apply bg-background/80 backdrop-blur-sm shadow-lg;
@@ -137,6 +137,6 @@
       @apply ring-1 ring-inset ring-white/10;
   }
   .project-block:hover .project-media-widget::before {
-      @apply inset-[-40%];
+      @apply inset-[-40%] transition-all duration-300;
   }
 }
