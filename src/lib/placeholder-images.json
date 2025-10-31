@@ -8,15 +8,21 @@
     },
     {
       "id": "carousel-aerospace",
-      "description": "Aerospace engineering concept",
-      "imageUrl": "https://images.unsplash.com/photo-1683498372259-236b2317b282?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxhZXJvc3BhY2UlMjBlbmdpbmVlcmluZ3xlbnwwfHx8fDE3MjE4NTE1Njd8MA&ixlib=rb-4.0.3&q=80&w=1080",
-      "imageHint": "aerospace engineering"
+      "description": "futuristic aerospace vehicle",
+      "imageUrl": "https://images.unsplash.com/photo-1736322414162-9be557fe47bf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxhZXJvc3BhY2UlMjB2ZWhpY2xlfGVufDB8fHx8MTc2MTg3NzkwN3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "aerospace vehicle"
     },
     {
       "id": "carousel-humanoid",
-      "description": "Humanoid robot concept",
-      "imageUrl": "https://images.unsplash.com/photo-1678410023478-522615a9c97b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxodW1hbm9pZCUyMHJvYm90fGVufDB8fHx8MTcyMTg1MTU2N3ww&ixlib=rb-4.0.3&q=80&w=1080",
+      "description": "futuristic humanoid robot",
+      "imageUrl": "https://images.unsplash.com/photo-1737644467636-6b0053476bb2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxodW1hbm9pZCUyMHJvYm90fGVufDB8fHx8MTc2MTg3NzkwNnww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "humanoid robot"
+    },
+    {
+      "id": "carousel-satellite",
+      "description": "futuristic satellite in orbit",
+      "imageUrl": "https://images.unsplash.com/photo-1634176866089-b633f4aec882?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxzYXRlbGxpdGUlMjBzcGFjZXxlbnwwfHx8fDE3NjE4MTU2Mjh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "satellite space"
     },
     {
       "id": "carousel-marine",
@@ -75,19 +81,19 @@
     {
       "id": "proj-labview-3d",
       "description": "Automation line",
-      "imageUrl": "https://images.unsplash.com/photo-1717386255773-a456c611dc4e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxmYWN0b3J5JTIwYXV0b21hdGlvbnxlbnwwfHx8fDE3NjE4NzM4MDh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1717386255773-a456c611dc4e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxmYWN0b3J5JTIwYXV0b21hdGlvbnxlbnwwfHx8fDE3NjE4NzM4MDh8MA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "factory automation"
     },
     {
       "id": "proj-labview-2d",
       "description": "GUI flows",
-      "imageUrl": "https://images.unsplash.com/photo-1545112969-bdd91ef544c7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxmbG93Y2hhcnQlMjB1aXxlbnwwfHx8fDE3NjE4NzM4MDl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1545112969-bdd91ef544c7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxmbG93Y2hhcnQlMjB1aXxlbnwwfHx8fDE3NjE4NzM4MDl8MA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "flowchart ui"
     },
     {
       "id": "proj-plow-3d",
       "description": "Custom snow plow 3d model",
-      "imageUrl": "https://images.unsplash.com/photo-1631779203044-05c13796991c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx2ZWhpY2xlJTIwc25vd3xlbnwwfHx8fDE3NjE4NzM4MDh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1631779203044-05c13796991c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx2ZWhpY2xlJTIwc25vd3xlbnwwfHx8fDE3NjE4NzM4MDh8MA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "vehicle snow"
     },
     {
