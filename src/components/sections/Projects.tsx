@@ -42,7 +42,7 @@ const projectsData = [
     image1Id: 'proj-plow-3d',
     image2Id: 'proj-plow-2d',
     link: '#',
-  }
+  },
 ];
 
 export default function Projects() {

@@ -3,18 +3,15 @@ import { useI18n } from '@/hooks/useI18n';
 import Link from 'next/link';
 
 const resources = [
-  { name: 'Three.js Editor', href: 'https://threejs.org/editor/' },
-  { name: 'Spline 3D', href: 'https://spline.design/' },
-  { name: 'CodeSandbox', href: 'https://codesandbox.io/' },
-  { name: 'Blender', href: 'https://blender.org/' },
+  { name: 'MATLAB & Simulink', href: 'https://www.mathworks.com/products/matlab.html' },
+  { name: 'SolidWorks', href: 'https://www.solidworks.com/' },
+  { name: 'Altium Designer', href: 'https://www.altium.com/altium-designer' },
+  { name: 'ROS (Robot Operating System)', href: 'https://www.ros.org/' },
   { name: 'Onshape CAD', href: 'https://www.onshape.com/en/' },
   { name: 'GitHub', href: 'https://github.com/' },
-  { name: 'Figma', href: 'https://www.figma.com/' },
-  { name: 'Kinematics Calculator', href: 'https://www.desmos.com/calculator' },
-  { name: 'OpenCV Tutorials', href: 'https://learnopencv.com/' },
-  { name: 'Observable Notebooks', href: 'https://observablehq.com/' },
-  { name: 'Polycam (3D capture)', href: 'https://poly.cam/' },
-  { name: 'Sketchfab', href: 'https://sketchfab.com/' },
+  { name: 'OpenCV', href: 'https://opencv.org/' },
+  { name: 'IEEE Xplore', href: 'https://ieeexplore.ieee.org/' },
+  { name: 'Google Scholar', href: 'https://scholar.google.com/' },
 ];
 
 export default function Resources() {

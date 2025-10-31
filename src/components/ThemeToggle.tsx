@@ -5,10 +5,10 @@ import { useI18n } from '@/hooks/useI18n';
 
 export default function ThemeToggle() {
     const { t } = useI18n();
-    const [theme, setTheme] = useState('dark');
+    const [theme, setTheme] = useState('light');
 
     useEffect(() => {
-        const storedTheme = localStorage.getItem('theme') || 'dark';
+        const storedTheme = localStorage.getItem('theme') || 'light';
         setTheme(storedTheme);
         document.documentElement.classList.toggle('dark', storedTheme === 'dark');
         document.body.classList.toggle('dark', storedTheme === 'dark');

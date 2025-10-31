@@ -110,3 +110,9 @@
     transform: translate(-10%, 10%);
   }
 }
+
+@layer utilities {
+  .project-block .content-card {
+    transition: all 0.3s ease-out;
+  }
+}
