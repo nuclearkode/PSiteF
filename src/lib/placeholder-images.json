@@ -37,12 +37,6 @@
       "imageHint": "snow plow"
     },
     {
-      "id": "carousel-ai",
-      "description": "AI tool",
-      "imageUrl": "https://images.unsplash.com/photo-1761599821310-da0d6356b4f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxhYnN0cmFjdCUyMGNvZGV8ZW58MHx8fHwxNzYxODY2NDEzfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "abstract code"
-    },
-    {
       "id": "proj-marine-3d",
       "description": "Marine vehicle 3D model",
       "imageUrl": "https://images.unsplash.com/photo-1651611243377-2c15b94ad613?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHwzZCUyMHJlbmRlcnxlbnwwfHx8fDE3NjE4NzM1NDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
@@ -101,18 +95,6 @@
       "description": "Fabrication drawings",
       "imageUrl": "https://images.unsplash.com/photo-1721244653506-1d9253e3e227?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxibHVlcHJpbnQlMjBkcmF3aW5nfGVufDB8fHx8MTc2MTc2MzMxN3ww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "blueprint drawing"
-    },
-    {
-      "id": "proj-diagram-3d",
-      "description": "Diagram Weaver UI",
-      "imageUrl": "https://images.unsplash.com/photo-1545235617-7a424c1a60cc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8dWklMjBkZXNpZ258ZW58MHx8fHwxNzYxODA3MzU5fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "ui design"
-    },
-    {
-      "id": "proj-diagram-2d",
-      "description": "System architecture diagram",
-      "imageUrl": "https://images.unsplash.com/photo-1721244654346-9be0c0129e36?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxhcmNoaXRlY3R1cmUlMjBkaWFncmFtfGVufDB8fHx8MTc2MTg0MDI2M3ww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "architecture diagram"
     },
     {
       "id": "about-avatar",

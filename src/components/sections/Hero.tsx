@@ -22,7 +22,6 @@ export default function Hero() {
     { id: 'proj-8051', imgId: 'carousel-encoder', alt: 'Encoder', text: '8051 speed control — Learn more' },
     { id: 'proj-labview', imgId: 'carousel-hopper', alt: 'Hopper', text: 'Automation line — Visit project' },
     { id: 'proj-snowplow', imgId: 'carousel-plow', alt: 'Snow plow', text: 'Custom plow — Fabrication notes' },
-    { id: 'proj-diagram', imgId: 'carousel-ai', alt: 'AI tool', text: 'Diagram Weaver — AI tool' },
   ];
 
   return (
