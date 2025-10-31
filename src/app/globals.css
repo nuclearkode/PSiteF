@@ -121,10 +121,11 @@
 
 @layer utilities {
   .content-card {
-    transition: all 0.3s ease-out;
+    @apply shadow-[0_20px_40px_rgba(0,0,0,0.2)];
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
   }
   .content-card:hover {
-      @apply -translate-y-1.5 shadow-[0_40px_80px_rgba(0,0,0,0.45)];
+      @apply -translate-y-1.5 shadow-[0_35px_60px_-15px_rgba(0,0,0,0.35)];
   }
   .header-scrolled {
     @apply bg-background/80 backdrop-blur-sm shadow-lg;
