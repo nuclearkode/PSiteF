@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import { I18nProvider } from '@/contexts/I18nContext';
 import { Toaster } from "@/components/ui/toaster"
 import { NoiseBackground } from '@/components/layout/NoiseBackground';
-import { ScrollRestorer } from '@/components/layout/ScrollRestorer';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -25,7 +24,6 @@ export default function RootLayout({
       </head>
       <body className="font-body antialiased">
         <I18nProvider>
-          <ScrollRestorer />
           <NoiseBackground />
           {children}
           <Toaster />
