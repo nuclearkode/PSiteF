@@ -4,7 +4,7 @@ import { useState, useEffect, useRef, FC, MouseEvent as ReactMouseEvent } from '
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
-import { LucideProps, ArrowUp } from 'lucide-react';
+import { LucideProps } from 'lucide-react';
 
 interface RadialMenuItem {
   id: string;
@@ -26,7 +26,7 @@ const RadialMenu: FC<RadialMenuProps> = ({ items, isOpen, onClose, onSelect, pos
   const router = useRouter();
   const [isClient, setIsClient] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
-  const [cursorAngle, setCursorAngle] = useState(0);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   useEffect(() => {
     setIsClient(true);
@@ -42,14 +42,30 @@ const RadialMenu: FC<RadialMenuProps> = ({ items, isOpen, onClose, onSelect, pos
         onClose();
       }
     };
+
+    const handleMouseMove = (e: MouseEvent) => {
+      if (!isOpen || !menuRef.current) return;
     
-    const handleMouseMove = (event: MouseEvent) => {
-      if (menuRef.current && isOpen && source === 'cursor') {
-        const menuRect = menuRef.current.getBoundingClientRect();
-        const menuCenterX = menuRect.left + menuRect.width / 2;
-        const menuCenterY = menuRect.top + menuRect.height / 2;
-        const angle = Math.atan2(event.clientY - menuCenterY, event.clientX - menuCenterX) * (180 / Math.PI);
-        setCursorAngle(angle + 90);
+      const menuRect = menuRef.current.getBoundingClientRect();
+      const menuCenterX = menuRect.left + menuRect.width / 2;
+      const menuCenterY = menuRect.top + menuRect.height / 2;
+    
+      const dx = e.clientX - menuCenterX;
+      const dy = e.clientY - menuCenterY;
+      
+      const distance = Math.sqrt(dx * dx + dy * dy);
+      const angle = (Math.atan2(dy, dx) * 180 / Math.PI + 360) % 360;
+    
+      const radius = menuRect.width / 2;
+      const innerRadius = radius * 0.4;
+    
+      if (distance > innerRadius && distance < radius) {
+        const angleStep = 360 / items.length;
+        const normalizedAngle = (angle + angleStep / 2) % 360;
+        const index = Math.floor(normalizedAngle / angleStep);
+        setHoveredIndex(index);
+      } else {
+        setHoveredIndex(null);
       }
     };
 
@@ -64,14 +80,14 @@ const RadialMenu: FC<RadialMenuProps> = ({ items, isOpen, onClose, onSelect, pos
       window.removeEventListener('scroll', handleScroll);
       document.removeEventListener('mousemove', handleMouseMove);
     };
-  }, [isOpen, onClose, source]);
+  }, [isOpen, onClose, source, items.length]);
 
 
   if (!isClient || !isOpen) {
     return null;
   }
 
-  const radius = 90; 
+  const radius = 100; 
   const angleStep = 360 / items.length;
 
   const handleItemClick = (e: ReactMouseEvent, item: RadialMenuItem) => {
@@ -89,6 +105,34 @@ const RadialMenu: FC<RadialMenuProps> = ({ items, isOpen, onClose, onSelect, pos
           transform: 'translate(-50%, -50%)',
         }
       : {};
+    
+  const getPathForSegment = (index: number) => {
+    const startAngle = angleStep * index - 90;
+    const endAngle = startAngle + angleStep;
+    const outerRadius = 128; 
+    const innerRadius = 51;
+
+    const startOuter = {
+        x: outerRadius * Math.cos(startAngle * Math.PI / 180),
+        y: outerRadius * Math.sin(startAngle * MathPI / 180)
+    };
+    const endOuter = {
+        x: outerRadius * Math.cos(endAngle * Math.PI / 180),
+        y: outerRadius * Math.sin(endAngle * Math.PI / 180)
+    };
+    const startInner = {
+        x: innerRadius * Math.cos(startAngle * Math.PI / 180),
+        y: innerRadius * Math.sin(startAngle * Math.PI / 180)
+    };
+    const endInner = {
+        x: innerRadius * Math.cos(endAngle * Math.PI / 180),
+        y: innerRadius * Math.sin(endAngle * Math.PI / 180)
+    };
+
+    const largeArcFlag = angleStep > 180 ? 1 : 0;
+
+    return `M ${startOuter.x} ${startOuter.y} A ${outerRadius} ${outerRadius} 0 ${largeArcFlag} 1 ${endOuter.x} ${endOuter.y} L ${endInner.x} ${endInner.y} A ${innerRadius} ${innerRadius} 0 ${largeArcFlag} 0 ${startInner.x} ${startInner.y} Z`;
+};
 
   return (
     <div
@@ -102,21 +146,27 @@ const RadialMenu: FC<RadialMenuProps> = ({ items, isOpen, onClose, onSelect, pos
     >
       <div
         className={cn(
-            "radial-container transition-all duration-300 pointer-events-auto",
+            "radial-container transition-all duration-300",
             isOpen ? "scale-100 opacity-100" : "scale-90 opacity-0",
-            source === 'quicklinks' ? 'relative -top-1/2 left-1/2 -translate-x-1/2 -translate-y-full' : 'absolute'
+            source === 'quicklinks' ? 'relative -top-1/2 left-1/2 -translate-x-1/2 -translate-y-full pointer-events-auto' : 'absolute pointer-events-auto'
         )}
       >
         <div className="relative w-64 h-64 flex items-center justify-center">
             <div 
-              className="absolute w-full h-full rounded-full shadow-2xl border-2 border-white/10"
+              className="absolute w-full h-full rounded-full"
               style={{
-                backgroundColor: 'rgba(22, 24, 29, 0.85)',
-                backdropFilter: 'blur(8px)',
-                WebkitBackdropFilter: 'blur(8px)',
+                backgroundColor: 'rgba(29, 30, 34, 0.95)',
                 maskImage: 'radial-gradient(circle, transparent 40%, black 41%)',
                 WebkitMaskImage: 'radial-gradient(circle, transparent 40%, black 41%)',
               }}
+            ></div>
+
+            <div
+                className="absolute w-full h-full rounded-full"
+                style={{
+                    background: 'radial-gradient(circle, rgba(0, 120, 255, 0.2) 0%, rgba(0, 120, 255, 0) 60%)',
+                    clipPath: 'circle(40% at 50% 50%)'
+                }}
             ></div>
             
             {items.map((_, index) => {
@@ -124,7 +174,7 @@ const RadialMenu: FC<RadialMenuProps> = ({ items, isOpen, onClose, onSelect, pos
               return (
                 <div
                   key={`line-${index}`}
-                  className="absolute left-1/2 top-0 w-px h-1/2 bg-white/10 origin-bottom"
+                  className="absolute left-1/2 top-0 w-px h-1/2 bg-gray-600/70 origin-bottom"
                   style={{
                     transform: `rotate(${angle}deg)`,
                     height: '50%',
@@ -134,21 +184,16 @@ const RadialMenu: FC<RadialMenuProps> = ({ items, isOpen, onClose, onSelect, pos
               );
             })}
             
-            {source === 'cursor' && (
-              <div
-                className="absolute w-4 h-4 text-white/50"
-                style={{
-                  top: '50%',
-                  left: '50%',
-                  transform: `translate(-50%, -50%) rotate(${cursorAngle}deg) translateY(-40px)`,
-                  transformOrigin: 'center center',
-                  transition: 'transform 0.1s linear'
-                }}
-              >
-                <ArrowUp size={16} />
-              </div>
-            )}
-
+            <svg viewBox="-128 -128 256 256" className="absolute w-full h-full pointer-events-none">
+              {items.map((_, index) => (
+                <path 
+                  key={`segment-${index}`}
+                  d={getPathForSegment(index)}
+                  fill={hoveredIndex === index ? '#0078F2' : 'transparent'}
+                  className="transition-colors duration-100"
+                />
+              ))}
+            </svg>
 
           {items.map((item, index) => {
             const angle = angleStep * index - 90;
@@ -160,19 +205,19 @@ const RadialMenu: FC<RadialMenuProps> = ({ items, isOpen, onClose, onSelect, pos
                 href={item.href}
                 key={item.id}
                 onClick={(e) => handleItemClick(e, item)}
-                className="radial-item group absolute w-16 h-16 flex flex-col items-center justify-center cursor-pointer transition-transform duration-200 hover:scale-110"
+                onMouseEnter={() => setHoveredIndex(index)}
+                onMouseLeave={() => setHoveredIndex(null)}
+                className="radial-item group absolute w-16 h-16 flex flex-col items-center justify-center cursor-pointer"
                 style={{
                   transform: `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))`,
                   top: '50%',
                   left: '50%',
                 }}
               >
-                <div className="relative flex items-center justify-center w-12 h-12">
-                    <div className="absolute inset-0 bg-primary/20 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-200 scale-90 group-hover:scale-100"></div>
-                    <div className="absolute inset-2 bg-primary/30 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-200 scale-90 group-hover:scale-100 blur-md"></div>
-                    <item.icon className="w-6 h-6 text-primary-foreground/80 group-hover:text-white transition-colors duration-200" />
-                </div>
-                <span className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground group-hover:text-foreground mt-0.5 transition-colors duration-200">{item.label}</span>
+                <item.icon className={cn(
+                  "w-8 h-8 transition-colors duration-100",
+                  hoveredIndex === index ? 'text-white' : 'text-gray-400'
+                )} />
               </Link>
             );
           })}
