@@ -49,7 +49,7 @@ const RadialMenu: FC<RadialMenuProps> = ({ items, isOpen, onClose, onSelect, pos
     return null;
   }
 
-  const radius = 120; // Radius of the circle
+  const radius = 90; // Adjust this to move icons closer or further
   const angleStep = 360 / items.length;
 
   const handleItemClick = (e: ReactMouseEvent, item: RadialMenuItem) => {
@@ -91,6 +91,23 @@ const RadialMenu: FC<RadialMenuProps> = ({ items, isOpen, onClose, onSelect, pos
                 WebkitMaskImage: 'radial-gradient(circle, transparent 40%, black 41%)',
               }}
             ></div>
+            
+            {items.map((_, index) => {
+              const angle = angleStep * index;
+              return (
+                <div
+                  key={`line-${index}`}
+                  className="absolute left-1/2 top-1/2 w-[1px] h-1/2 bg-white/10 origin-top"
+                  style={{
+                    transform: `rotate(${angle + angleStep / 2}deg) translateY(-100%)`,
+                    height: '50%',
+                    top: '50%',
+                    transformOrigin: 'top',
+                  }}
+                />
+              );
+            })}
+
           {items.map((item, index) => {
             const angle = angleStep * index - 90; // Start from top
             const x = radius * Math.cos((angle * Math.PI) / 180);
