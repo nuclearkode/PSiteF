@@ -57,7 +57,7 @@
     {
       "id": "proj-pcb-3d",
       "description": "STM32 board render",
-      "imageUrl": "https://images.unsplash.com/photo-1697577418970-95d99b5a55cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjaXJjdWl0JTIwYm9hcmR8ZW58MHx8fHwxNzYxNzg3MTc5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1697577418970-95d99b5a55cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjaXJjdWl0JTIwYm9hcmR8ZW58MHx8fHwxNzYxNzg3MTc5fDA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "circuit board"
     },
     {
@@ -107,6 +107,12 @@
       "description": "Portrait of Ahmed Badawy",
       "imageUrl": "https://i.imgur.com/zYKWd5P.png",
       "imageHint": "man portrait"
+    },
+    {
+      "id": "newspaper-feature",
+      "description": "Newspaper feature about robotics competition",
+      "imageUrl": "https://i.imgur.com/8PAQ2oZ.png",
+      "imageHint": "newspaper article"
     }
   ]
 }

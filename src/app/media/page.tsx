@@ -5,6 +5,7 @@ import { useI18n } from '@/hooks/useI18n';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const mediaItems = [
   {
@@ -29,8 +30,7 @@ const mediaItems = [
   {
     titleKey: 'media_burnaby_now_title',
     descriptionKey: 'media_burnaby_now_desc',
-    imageUrl: 'https://i.imgur.com/8PAQ2oZ.png',
-    imageHint: 'newspaper article',
+    imageId: 'newspaper-feature',
     links: [],
   },
   {
@@ -57,30 +57,38 @@ export default function MediaPage() {
                 {t('media')}
                 </h1>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  {mediaItems.map((item, index) => (
-                    <div key={index} className="media-card flex flex-col content-card bg-card rounded-4xl overflow-hidden border-2 border-white/10 shadow-[0_30px_60px_rgba(0,0,0,0.35)] ring-1 ring-inset ring-white/5">
-                      <div className="relative h-64 w-full">
-                        <Image
-                          src={item.imageUrl}
-                          alt={t(item.titleKey)}
-                          data-ai-hint={item.imageHint}
-                          fill
-                          className="object-cover"
-                        />
-                      </div>
-                      <div className="p-[clamp(18px,2.2vw,28px)] flex flex-col flex-grow">
-                        <h3 className="uppercase tracking-[.06em] mb-1.5 text-accent-dark font-headline">{t(item.titleKey)}</h3>
-                        <p className="text-muted-foreground mb-3 flex-grow" dangerouslySetInnerHTML={{ __html: t(item.descriptionKey) }}></p>
-                        <div className="flex gap-3 flex-wrap">
-                            {item.links.map(link => (
-                                <Link key={link.url} className="visit-link font-extrabold text-sm opacity-90 border border-white/10 p-2 rounded-xl transition-transform hover:-translate-y-0.5 hover:bg-white/5 whitespace-nowrap inline-flex items-center gap-1.5" href={link.url} target="_blank" rel="noopener">
-                                    {t(link.labelKey)} <ArrowUpRight className="w-4 h-4" />
-                                </Link>
-                            ))}
+                  {mediaItems.map((item, index) => {
+                    const imageInfo = item.imageId ? PlaceHolderImages.find(img => img.id === item.imageId) : { imageUrl: item.imageUrl, imageHint: item.imageHint };
+                    const imageUrl = imageInfo?.imageUrl;
+                    const imageHint = imageInfo?.imageHint;
+                    
+                    return (
+                      <div key={index} className="media-card flex flex-col content-card bg-card rounded-4xl overflow-hidden border-2 border-white/10 shadow-[0_30px_60px_rgba(0,0,0,0.35)] ring-1 ring-inset ring-white/5">
+                        <div className="relative h-64 w-full">
+                          {imageUrl && (
+                            <Image
+                              src={imageUrl}
+                              alt={t(item.titleKey)}
+                              data-ai-hint={imageHint}
+                              fill
+                              className="object-cover"
+                            />
+                          )}
+                        </div>
+                        <div className="p-[clamp(18px,2.2vw,28px)] flex flex-col flex-grow">
+                          <h3 className="uppercase tracking-[.06em] mb-1.5 text-accent-dark font-headline">{t(item.titleKey)}</h3>
+                          <p className="text-muted-foreground mb-3 flex-grow" dangerouslySetInnerHTML={{ __html: t(item.descriptionKey) }}></p>
+                          <div className="flex gap-3 flex-wrap">
+                              {item.links.map(link => (
+                                  <Link key={link.url} className="visit-link font-extrabold text-sm opacity-90 border border-white/10 p-2 rounded-xl transition-transform hover:-translate-y-0.5 hover:bg-white/5 whitespace-nowrap inline-flex items-center gap-1.5" href={link.url} target="_blank" rel="noopener">
+                                      {t(link.labelKey)} <ArrowUpRight className="w-4 h-4" />
+                                  </Link>
+                              ))}
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  ))}
+                    )
+                  })}
                 </div>
             </div>
         </section>
