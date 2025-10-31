@@ -3,7 +3,7 @@
     {
       "id": "hero-avatar",
       "description": "Portrait of Ahmed Badawy",
-      "imageUrl": "https://storage.googleapis.com/aifire-423419.appspot.com/uploads/ahmed-badawy-new.png?alt=media&token=c1a3b37a-77e1-4c19-90d1-0f7e8b6b1f2b",
+      "imageUrl": "https://i.imgur.com/zYKWd5P.png",
       "imageHint": "portrait person"
     },
     {
@@ -81,19 +81,19 @@
     {
       "id": "proj-labview-3d",
       "description": "Automation line",
-      "imageUrl": "https://images.unsplash.com/photo-1717386255773-a456c611dc4e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxmYWN0b3J5JTIwYXV0b21hdGlvbnxlbnwwfHx8fDE3NjE4NzM4MDh8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1717386255773-a456c611dc4e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxmYWN0b3J5JTIwYXV0b21hdGlvbnxlbnwwfHx8fDE3NjE4NzM4MDh8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "factory automation"
     },
     {
       "id": "proj-labview-2d",
       "description": "GUI flows",
-      "imageUrl": "https://images.unsplash.com/photo-1545112969-bdd91ef544c7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxmbG93Y2hhcnQlMjB1aXxlbnwwfHx8fDE3NjE4NzM4MDl8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1545112969-bdd91ef544c7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxmbG93Y2hhcnQlMjB1aXxlbnwwfHx8fDE3NjE4NzM4MDl8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "flowchart ui"
     },
     {
       "id": "proj-plow-3d",
       "description": "Custom snow plow 3d model",
-      "imageUrl": "https://images.unsplash.com/photo-1631779203044-05c13796991c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx2ZWhpY2xlJTIwc25vd3xlbnwwfHx8fDE3NjE4NzM4MDh8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1631779203044-05c13796991c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx2ZWhpY2xlJTIwc25vd3xlbnwwfHx8fDE3NjE4NzM4MDh8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "vehicle snow"
     },
     {
@@ -105,7 +105,7 @@
     {
       "id": "about-avatar",
       "description": "Portrait of Ahmed Badawy",
-      "imageUrl": "https://storage.googleapis.com/aifire-423419.appspot.com/uploads/ahmed-badawy-new.png?alt=media&token=c1a3b37a-77e1-4c19-90d1-0f7e8b6b1f2b",
+      "imageUrl": "https://i.imgur.com/zYKWd5P.png",
       "imageHint": "man portrait"
     }
   ]
