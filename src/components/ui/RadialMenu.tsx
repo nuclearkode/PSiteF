@@ -34,13 +34,21 @@ const RadialMenu: FC<RadialMenuProps> = ({ items, isOpen, onClose, onSelect, pos
         onClose();
       }
     };
+    
+    const handleScroll = () => {
+      if (isOpen) {
+        onClose();
+      }
+    };
 
     if (isOpen) {
       document.addEventListener('mousedown', handleClickOutside);
+      window.addEventListener('scroll', handleScroll);
     }
 
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, [isOpen, onClose]);
 
@@ -97,12 +105,11 @@ const RadialMenu: FC<RadialMenuProps> = ({ items, isOpen, onClose, onSelect, pos
               return (
                 <div
                   key={`line-${index}`}
-                  className="absolute left-1/2 top-1/2 w-[1px] h-1/2 bg-white/10 origin-top"
+                  className="absolute left-1/2 top-0 w-[1px] h-1/2 bg-white/10 origin-bottom"
                   style={{
-                    transform: `rotate(${angle + angleStep / 2}deg) translateY(-100%)`,
-                    height: '50%',
-                    top: '50%',
-                    transformOrigin: 'top',
+                    transform: `rotate(${angle + angleStep / 2}deg)`,
+                    height: '14.5%', // (100% - 41%*2) / 2 = 9%. then (90-64)/2
+                    top: '6.5%', // (100-88)/2
                   }}
                 />
               );
@@ -120,7 +127,7 @@ const RadialMenu: FC<RadialMenuProps> = ({ items, isOpen, onClose, onSelect, pos
                 onClick={(e) => handleItemClick(e, item)}
                 className="radial-item group absolute w-24 h-24 flex flex-col items-center justify-center cursor-pointer transition-transform duration-200 hover:scale-110"
                 style={{
-                  transform: `translate(${x}px, ${y}px) translate(-50%, -50%)`,
+                  transform: `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))`,
                   top: '50%',
                   left: '50%',
                 }}
