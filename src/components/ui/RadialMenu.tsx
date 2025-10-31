@@ -114,7 +114,7 @@ const RadialMenu: FC<RadialMenuProps> = ({ items, isOpen, onClose, onSelect, pos
 
     const startOuter = {
         x: outerRadius * Math.cos(startAngle * Math.PI / 180),
-        y: outerRadius * Math.sin(startAngle * MathPI / 180)
+        y: outerRadius * Math.sin(startAngle * Math.PI / 180)
     };
     const endOuter = {
         x: outerRadius * Math.cos(endAngle * Math.PI / 180),
