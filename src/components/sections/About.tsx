@@ -10,14 +10,14 @@ export default function About() {
   return (
     <section 
       id="about" 
-      className="relative z-[1]"
+      className="relative z-[1] py-8 scroll-mt-24"
     >
-      <div className="section-inner max-w-[1280px] mx-auto pt-8 pb-16 px-gutter">
+      <div className="section-inner max-w-[1280px] mx-auto px-gutter">
         <h2 className="section-title font-headline text-[clamp(32px,6vw,64px)] tracking-[.06em] uppercase text-accent-dark mb-4 leading-none">{t('abt')}</h2>
         <div className="grid grid-cols-1 lg:grid-cols-[1.2fr,1fr] gap-5">
           <div className="content-card bg-card rounded-4xl p-[clamp(18px,2.2vw,28px)] border-2 border-white/10 shadow-[0_30px_60px_rgba(0,0,0,0.35)] ring-1 ring-inset ring-white/5">
             <h3 className="font-headline">Ahmed Badawy</h3>
-            <p className="mt-2 leading-relaxed" dangerouslySetInnerHTML={{ __html: t('aboutP') }}></p>
+            <div className="prose prose-p:my-3 prose-p:leading-relaxed text-muted-foreground mt-2" dangerouslySetInnerHTML={{ __html: t('aboutP') }}></div>
           </div>
           <div className="content-card flex items-center justify-center bg-card rounded-4xl p-[clamp(18px,2.2vw,28px)] border-2 border-white/10 shadow-[0_30px_60px_rgba(0,0,0,0.35)] ring-1 ring-inset ring-white/5">
             {avatar && (
