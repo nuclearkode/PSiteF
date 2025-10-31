@@ -83,6 +83,9 @@
   .prose h4 {
     @apply mt-4;
   }
+  section {
+    scroll-margin-top: 5rem;
+  }
 }
 
 @keyframes background-pan {
@@ -129,9 +132,6 @@
   .content-card {
     @apply shadow-[0_20px_40px_rgba(0,0,0,0.2)];
     transition: box-shadow 0.3s ease-out;
-  }
-  .content-card:hover {
-      @apply shadow-[0_35px_60px_-15px_rgba(0,0,0,0.35)];
   }
   .header-scrolled {
     @apply bg-background/80 backdrop-blur-sm shadow-lg;
