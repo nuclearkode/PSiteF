@@ -81,7 +81,16 @@ const RadialMenu: FC<RadialMenuProps> = ({ items, isOpen, onClose, onSelect, pos
         style={menuStyles}
       >
         <div className="relative w-64 h-64 flex items-center justify-center">
-            <div className="absolute w-full h-full bg-card/80 backdrop-blur-sm rounded-full shadow-2xl border-2 border-white/10"></div>
+            <div 
+              className="absolute w-full h-full rounded-full shadow-2xl border-2 border-white/10"
+              style={{
+                backgroundColor: 'rgba(22, 24, 29, 0.85)',
+                backdropFilter: 'blur(8px)',
+                WebkitBackdropFilter: 'blur(8px)',
+                maskImage: 'radial-gradient(circle, transparent 40%, black 41%)',
+                WebkitMaskImage: 'radial-gradient(circle, transparent 40%, black 41%)',
+              }}
+            ></div>
           {items.map((item, index) => {
             const angle = angleStep * index - 90; // Start from top
             const x = radius * Math.cos((angle * Math.PI) / 180);
