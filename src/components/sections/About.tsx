@@ -10,7 +10,7 @@ export default function About() {
   return (
     <section 
       id="about" 
-      className="relative z-[1] py-8 pt-12 scroll-mt-20"
+      className="relative z-[1] py-12 scroll-mt-20"
     >
       <div className="section-inner max-w-[1280px] mx-auto px-gutter">
         <h2 className="section-title font-headline text-[clamp(32px,6vw,64px)] tracking-[.06em] uppercase text-accent-dark mb-4 leading-none">{t('abt')}</h2>
