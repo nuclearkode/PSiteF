@@ -57,21 +57,31 @@ export default function MediaPage() {
                 </h1>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   {mediaItems.map((item, index) => {
-                    const imageInfo = item.imageId ? PlaceHolderImages.find(img => img.id === item.imageId) : { imageUrl: item.imageUrl, imageHint: item.imageHint };
+                    const imageInfo = item.imageId ? PlaceHolderImages.find(img => img.id === item.imageId) : { imageUrl: item.imageUrl, imageHint: item.imageHint, description: t(item.titleKey) };
                     const imageUrl = imageInfo?.imageUrl;
                     const imageHint = imageInfo?.imageHint;
+                    const altText = imageInfo?.description || t(item.titleKey);
                     
                     return (
-                      <div key={index} className="media-card flex flex-col content-card bg-card rounded-4xl overflow-hidden border-2 border-white/10 shadow-[0_30px_60px_rgba(0,0,0,0.35)] ring-1 ring-inset ring-white/5">
-                        <div className="relative h-64 w-full bg-black/20">
+                      <div key={index} className="media-card flex flex-col bg-card rounded-4xl overflow-hidden border-2 border-white/10 shadow-[0_30px_60px_rgba(0,0,0,0.35)] ring-1 ring-inset ring-white/5">
+                        <div className="relative h-64 w-full bg-black overflow-hidden">
                           {imageUrl && (
-                            <Image
-                              src={imageUrl}
-                              alt={t(item.titleKey)}
-                              data-ai-hint={imageHint}
-                              fill
-                              className="object-contain"
-                            />
+                            <>
+                              <Image
+                                src={imageUrl}
+                                alt={altText}
+                                fill
+                                className="object-cover z-0 scale-110 blur-2xl brightness-50"
+                                aria-hidden="true"
+                              />
+                              <Image
+                                src={imageUrl}
+                                alt={altText}
+                                data-ai-hint={imageHint}
+                                fill
+                                className="object-contain z-10"
+                              />
+                            </>
                           )}
                         </div>
                         <div className="p-[clamp(18px,2.2vw,28px)] flex flex-col flex-grow">
@@ -96,5 +106,3 @@ export default function MediaPage() {
     </>
   );
 }
-
-    

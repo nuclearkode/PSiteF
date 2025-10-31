@@ -15,6 +15,29 @@ type ProjectCardProps = {
 
 const findImage = (id: string) => PlaceHolderImages.find(img => img.id === id);
 
+const ImageWithBlurryBg = ({ image }: { image: ReturnType<typeof findImage> }) => {
+  if (!image) return null;
+  return (
+    <>
+      <Image
+        src={image.imageUrl}
+        alt={image.description}
+        fill
+        className="object-cover z-0 scale-110 blur-2xl brightness-50"
+        aria-hidden="true"
+      />
+      <Image
+        src={image.imageUrl}
+        alt={image.description}
+        data-ai-hint={image.imageHint}
+        fill
+        className="object-contain z-10"
+      />
+    </>
+  );
+};
+
+
 export default function ProjectCard({ id, titleKey, descriptionKey, image1Id, image2Id, link, t }: ProjectCardProps) {
   const image1 = findImage(image1Id);
   const image2 = findImage(image2Id);
@@ -25,17 +48,13 @@ export default function ProjectCard({ id, titleKey, descriptionKey, image1Id, im
     <article className="project-block grid gap-4 mb-proj-gap" id={id}>
       <div className="widgets grid grid-cols-1 lg:grid-cols-2 gap-4 items-stretch">
         <div className={cn(mediaWidgetBaseClasses, "bg-gradient-to-b from-[#1f232c] to-[#171a22]")}>
-          <div className="media-inner relative rounded-3xl overflow-hidden grid place-items-center h-full bg-black/20">
-            {image1 && (
-              <Image src={image1.imageUrl} alt={image1.description} data-ai-hint={image1.imageHint} fill className="object-contain" />
-            )}
+          <div className="media-inner relative rounded-3xl overflow-hidden grid place-items-center h-full bg-black">
+            <ImageWithBlurryBg image={image1} />
           </div>
         </div>
         <div className={cn(mediaWidgetBaseClasses, "bg-primary text-white")}>
-          <div className="media-inner relative rounded-3xl overflow-hidden grid place-items-center h-full bg-black/20">
-            {image2 && (
-              <Image src={image2.imageUrl} alt={image2.description} data-ai-hint={image2.imageHint} fill className="object-contain" />
-            )}
+          <div className="media-inner relative rounded-3xl overflow-hidden grid place-items-center h-full bg-black">
+            <ImageWithBlurryBg image={image2} />
           </div>
         </div>
       </div>
