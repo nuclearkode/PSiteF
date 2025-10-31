@@ -6,10 +6,10 @@ export default function QuickLinks() {
   const { t } = useI18n();
 
   const tiles = [
-    { href: '/resources', labelKey: 'res' },
-    { href: '/media', labelKey: 'media' },
     { href: '/#projects', labelKey: 'proj' },
     { href: '/#about', labelKey: 'abt' },
+    { href: '/resources', labelKey: 'res' },
+    { href: '/media', labelKey: 'media' },
   ];
 
   return (
@@ -19,7 +19,7 @@ export default function QuickLinks() {
           <Link
             key={index}
             href={tile.href}
-            className="tile bg-primary text-white rounded-4xl p-6 shadow-[0_30px_60px_rgba(0,0,0,0.35)] ring-1 ring-inset ring-white/10 flex items-end justify-between min-h-32"
+            className="tile bg-primary text-white rounded-4xl p-6 shadow-[0_30px_60px_rgba(0,0,0,0.35)] ring-1 ring-inset ring-white/10 flex items-end justify-between min-h-32 transition-transform duration-300 hover:scale-[1.03] hover:-translate-y-1"
           >
             <span className="font-black text-[clamp(18px,2.2vw,28px)] tracking-[.06em] uppercase font-headline">
               {t(tile.labelKey)}

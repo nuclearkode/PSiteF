@@ -64,6 +64,8 @@
   body {
     @apply bg-background text-foreground;
     background-image: linear-gradient(180deg, hsl(var(--background)), hsl(var(--secondary)));
+    background-size: 200% 200%;
+    animation: background-pan 20s ease-in-out infinite;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
@@ -73,8 +75,14 @@
     text-decoration: none;
   }
   .btn {
-    @apply border-2 border-current bg-transparent rounded-full px-4 py-2.5 cursor-pointer font-bold leading-none;
+    @apply border-2 border-current bg-transparent rounded-full px-4 py-2.5 cursor-pointer font-bold leading-none transition-transform hover:-translate-y-0.5;
   }
+}
+
+@keyframes background-pan {
+  0% { background-position: 50% 0%; }
+  50% { background-position: 50% 100%; }
+  100% { background-position: 50% 0%; }
 }
 
 @keyframes grain {
@@ -112,8 +120,11 @@
 }
 
 @layer utilities {
-  .project-block .content-card {
+  .content-card {
     transition: all 0.3s ease-out;
+  }
+  .content-card:hover {
+      @apply -translate-y-1.5 shadow-[0_40px_80px_rgba(0,0,0,0.45)];
   }
   .header-scrolled {
     @apply bg-background/80 backdrop-blur-sm shadow-lg;
