@@ -5,8 +5,8 @@ import Hero from '@/components/sections/Hero';
 import QuickLinks from '@/components/sections/QuickLinks';
 import Projects from '@/components/sections/Projects';
 import Experience from '@/components/sections/Experience';
-import Resources from '@/components/sections/Resources';
 import About from '@/components/sections/About';
+import Media from '@/components/sections/Media';
 
 export default function Home() {
   return (
@@ -17,7 +17,7 @@ export default function Home() {
         <QuickLinks />
         <Projects />
         <Experience />
-        <Resources />
+        <Media />
         <About />
       </main>
       <Footer />
