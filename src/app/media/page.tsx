@@ -7,32 +7,39 @@ import Link from 'next/link';
 
 const mediaItems = [
   {
-    titleKey: 'media1_title',
-    descriptionKey: 'media1_desc',
+    titleKey: 'media_sfu_fira_title',
+    descriptionKey: 'media_sfu_fira_desc',
     imageUrl: 'https://picsum.photos/seed/media1/600/400',
-    imageHint: 'robotics club',
-    link: '#',
+    imageHint: 'robotics award ceremony',
+    links: [
+      { url: 'https://x.com/SFUMechatronics/status/1795527666713690532', labelKey: 'sfu_x' },
+      { url: 'https://www.sfu.ca/fas/news-events/news/2024/05/2024-fira-canada-roboworld-cup.html', labelKey: 'sfu_news' },
+    ],
   },
   {
-    titleKey: 'media2_title',
-    descriptionKey: 'media2_desc',
+    titleKey: 'media_alpha_secondary_title',
+    descriptionKey: 'media_alpha_secondary_desc',
     imageUrl: 'https://picsum.photos/seed/media2/600/400',
-    imageHint: 'robotics competition award',
-    link: '#',
+    imageHint: 'robotics competition',
+    links: [
+      { url: 'https://www.vancouverisawesome.com/burnaby-now-archive/news/burnaby-school-robotics-club-headed-for-championships-after-years-long-hiatus-5126362', labelKey: 'read_article' },
+    ],
   },
   {
-    titleKey: 'media3_title',
-    descriptionKey: 'media3_desc',
+    titleKey: 'media_burnaby_now_title',
+    descriptionKey: 'media_burnaby_now_desc',
     imageUrl: 'https://picsum.photos/seed/media3/600/400',
-    imageHint: 'news article',
-    link: '#',
+    imageHint: 'newspaper article',
+    links: [],
   },
   {
-    titleKey: 'media4_title',
-    descriptionKey: 'media4_desc',
+    titleKey: 'media_coach_title',
+    descriptionKey: 'media_coach_desc',
     imageUrl: 'https://picsum.photos/seed/media4/600/400',
-    imageHint: 'conference speaker',
-    link: '#',
+    imageHint: 'robotics coaching students',
+    links: [
+        { url: 'https://kavosh.ai', labelKey: 'official_website' },
+    ],
   }
 ];
 
@@ -50,7 +57,7 @@ export default function MediaPage() {
                 </h1>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   {mediaItems.map((item, index) => (
-                    <div key={index} className="media-card content-card bg-card rounded-4xl overflow-hidden border-2 border-white/10 shadow-[0_30px_60px_rgba(0,0,0,0.35)] ring-1 ring-inset ring-white/5">
+                    <div key={index} className="media-card flex flex-col content-card bg-card rounded-4xl overflow-hidden border-2 border-white/10 shadow-[0_30px_60px_rgba(0,0,0,0.35)] ring-1 ring-inset ring-white/5">
                       <div className="relative h-64 w-full">
                         <Image
                           src={item.imageUrl}
@@ -60,14 +67,16 @@ export default function MediaPage() {
                           className="object-cover"
                         />
                       </div>
-                      <div className="p-[clamp(18px,2.2vw,28px)]">
+                      <div className="p-[clamp(18px,2.2vw,28px)] flex flex-col flex-grow">
                         <h3 className="uppercase tracking-[.06em] mb-1.5 text-accent-dark font-headline">{t(item.titleKey)}</h3>
-                        <p className="text-muted-foreground mb-3">{t(item.descriptionKey)}</p>
-                        {item.link !== '#' && (
-                          <Link className="visit-link font-extrabold text-sm opacity-90 border border-white/10 p-2 rounded-xl transition-transform hover:-translate-y-0.5 hover:bg-white/5 whitespace-nowrap" href={item.link} target="_blank" rel="noopener">
-                            {t('readMore')}
-                          </Link>
-                        )}
+                        <p className="text-muted-foreground mb-3 flex-grow" dangerouslySetInnerHTML={{ __html: t(item.descriptionKey) }}></p>
+                        <div className="flex gap-3 flex-wrap">
+                            {item.links.map(link => (
+                                <Link key={link.url} className="visit-link font-extrabold text-sm opacity-90 border border-white/10 p-2 rounded-xl transition-transform hover:-translate-y-0.5 hover:bg-white/5 whitespace-nowrap" href={link.url} target="_blank" rel="noopener">
+                                    {t(link.labelKey)} ↗
+                                </Link>
+                            ))}
+                        </div>
                       </div>
                     </div>
                   ))}

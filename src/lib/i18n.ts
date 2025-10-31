@@ -60,7 +60,23 @@ export const I18N = {
     media3_title: 'Featured in Engineering News',
     media3_desc: "An article covering our team's innovative approach to autonomous vehicle design.",
     media4_title: 'Guest Speaker at Tech Conference',
-    media4_desc: 'Invited to speak about the future of mechatronics and AI integration.'
+    media4_desc: 'Invited to speak about the future of mechatronics and AI integration.',
+
+    media_sfu_fira_title: '2nd Place at FIRA Roboworld Cup',
+    media_sfu_fira_desc: 'My Simon Fraser University Fira Robotics Team achieved 2nd place, with mentions in official university sources.',
+    sfu_x: 'View on X',
+    sfu_news: 'SFU News',
+    read_article: 'Read Article',
+    official_website: 'Official Website',
+
+    media_alpha_secondary_title: 'Alpha Secondary 2nd Place Finish',
+    media_alpha_secondary_desc: 'As "The One Man Team", I led the Alpha Secondary Mechatronics Program Team to a 2nd place finish against many competitive teams, securing the program\'s first provincial qualification.',
+
+    media_burnaby_now_title: 'Burnaby Now Newspaper Feature',
+    media_burnaby_now_desc: 'Mentioned in my city’s newspaper for reaching the semi-finals in a VEX Robotics world cup qualifying tournament. (Published: March 10, 2022)',
+
+    media_coach_title: 'Passion for Education and Robotics',
+    media_coach_desc: 'I work as a robotics coach for competitive teams with students aged 7-13, using platforms like Arduino, VEX, and Lego. I\'ve adapted the curriculum to help my student teams achieve top 3 placements in FIRA RoboCups in Brazil and Canada and have gone beyond my duties to help other teams in need.'
   },
   fr: {
     title: 'Ahmed Badawy | Portfolio Mécatronique & Robotique',
@@ -123,7 +139,23 @@ export const I18N = {
     media3_title: 'Présenté dans les nouvelles de l\'ingénierie',
     media3_desc: "Un article sur l'approche innovante de notre équipe en matière de conception de véhicules autonomes.",
     media4_title: 'Conférencier invité à la conférence technique',
-    media4_desc: 'Invité à parler de l\'avenir de la mécatronique et de l\'intégration de l\'IA.'
+    media4_desc: 'Invité à parler de l\'avenir de la mécatronique et de l\'intégration de l\'IA.',
+
+    media_sfu_fira_title: '2e place à la FIRA Roboworld Cup',
+    media_sfu_fira_desc: 'Mon équipe de robotique Fira de l\'Université Simon Fraser a obtenu la 2e place, avec des mentions dans les sources officielles de l\'université.',
+    sfu_x: 'Voir sur X',
+    sfu_news: 'Nouvelles SFU',
+    read_article: 'Lire l\'article',
+    official_website: 'Site officiel',
+
+    media_alpha_secondary_title: '2e place pour Alpha Secondary',
+    media_alpha_secondary_desc: 'En tant que "The One Man Team", j\'ai mené l\'équipe du programme de mécatronique d\'Alpha Secondary à une 2e place contre de nombreuses équipes compétitives, assurant la première qualification provinciale du programme.',
+
+    media_burnaby_now_title: 'Article dans le journal Burnaby Now',
+    media_burnaby_now_desc: 'Mentionné dans le journal de ma ville pour avoir atteint les demi-finales d\'un tournoi de qualification pour la coupe du monde de robotique VEX. (Publié: 10 mars 2022)',
+
+    media_coach_title: 'Passion pour l\'éducation et la robotique',
+    media_coach_desc: 'Je travaille comme entraîneur de robotique pour des équipes compétitives avec des élèves de 7 à 13 ans, en utilisant des plateformes comme Arduino, VEX et Lego. J\'ai adapté le programme pour aider mes équipes d\'élèves à se classer parmi les 3 premiers aux RoboCups de la FIRA au Brésil et au Canada et j\'ai dépassé mes fonctions pour aider d\'autres équipes dans le besoin.'
   },
 };
 
