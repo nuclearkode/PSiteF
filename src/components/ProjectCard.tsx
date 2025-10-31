@@ -19,22 +19,22 @@ export default function ProjectCard({ id, titleKey, descriptionKey, image1Id, im
   const image1 = findImage(image1Id);
   const image2 = findImage(image2Id);
   const descriptionHtml = t(descriptionKey);
-  const mediaWidgetBaseClasses = "project-media-widget relative min-h-[clamp(300px,50vh,560px)] overflow-hidden rounded-4xl shadow-[0_40px_80px_rgba(0,0,0,0.45)] ring-1 ring-inset ring-white/5 p-4 before:absolute before:inset-[-20%] before:bg-[radial-gradient(85%_85%_at_50%_50%,rgba(255,255,255,0.06)_0%,rgba(0,0,0,0.18)_60%,rgba(0,0,0,0.55)_100%)] before:opacity-80 before:mix-blend-multiply before:transition-all before:duration-300 before:ease-out after:absolute after:inset-0 after:opacity-[.08] after:mix-blend-overlay after:bg-[url('data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%20100%20100%27%3E%3Cfilter%20id=%27n%27%3E%3CfeTurbulence%20type=%27fractalNoise%27%20baseFrequency=%270.8%27%20numOctaves=%274%27%20stitchTiles=%27stitch%27/%3E%3CfeColorMatrix%20type=%27saturate%27%20values=%270%27/%3E%3C/filter%3E%3Crect%20width=%27100%25%27%20height=%27100%25%27%20filter=%27url(%23n)%27/%3E%3C/svg%3E')] after:bg-[length:220px_220px]";
+  const mediaWidgetBaseClasses = "project-media-widget relative min-h-[clamp(300px,50vh,560px)] overflow-hidden rounded-4xl shadow-[0_20px_40px_rgba(0,0,0,0.2)] ring-1 ring-inset ring-white/5 p-4 before:absolute before:inset-[-20%] before:bg-[radial-gradient(85%_85%_at_50%_50%,rgba(255,255,255,0.06)_0%,rgba(0,0,0,0.18)_60%,rgba(0,0,0,0.55)_100%)] before:opacity-80 before:mix-blend-multiply before:transition-all before:duration-300 before:ease-out after:absolute after:inset-0 after:opacity-[.08] after:mix-blend-overlay after:bg-[url('data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%20100%20100%27%3E%3Cfilter%20id=%27n%27%3E%3CfeTurbulence%20type=%27fractalNoise%27%20baseFrequency=%270.8%27%20numOctaves=%274%27%20stitchTiles=%27stitch%27/%3E%3CfeColorMatrix%20type=%27saturate%27%20values=%270%27/%3E%3C/filter%3E%3Crect%20width=%27100%25%27%20height=%27100%25%27%20filter=%27url(%23n)%27/%3E%3C/svg%3E')] after:bg-[length:220px_220px]";
 
   return (
     <article className="project-block grid gap-4 mb-proj-gap" id={id}>
       <div className="widgets grid grid-cols-1 lg:grid-cols-2 gap-4 items-stretch">
         <div className={cn(mediaWidgetBaseClasses, "bg-gradient-to-b from-[#1f232c] to-[#171a22]")}>
-          <div className="media-inner relative rounded-3xl overflow-hidden grid place-items-center h-full">
+          <div className="media-inner relative rounded-3xl overflow-hidden grid place-items-center h-full bg-black/20">
             {image1 && (
-              <Image src={image1.imageUrl} alt={image1.description} data-ai-hint={image1.imageHint} fill className="object-cover" />
+              <Image src={image1.imageUrl} alt={image1.description} data-ai-hint={image1.imageHint} fill className="object-contain" />
             )}
           </div>
         </div>
         <div className={cn(mediaWidgetBaseClasses, "bg-primary text-white")}>
-          <div className="media-inner relative rounded-3xl overflow-hidden grid place-items-center h-full">
+          <div className="media-inner relative rounded-3xl overflow-hidden grid place-items-center h-full bg-black/20">
             {image2 && (
-              <Image src={image2.imageUrl} alt={image2.description} data-ai-hint={image2.imageHint} fill className="object-cover" />
+              <Image src={image2.imageUrl} alt={image2.description} data-ai-hint={image2.imageHint} fill className="object-contain" />
             )}
           </div>
         </div>

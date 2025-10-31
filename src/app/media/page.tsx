@@ -63,14 +63,14 @@ export default function MediaPage() {
                     
                     return (
                       <div key={index} className="media-card flex flex-col content-card bg-card rounded-4xl overflow-hidden border-2 border-white/10 shadow-[0_30px_60px_rgba(0,0,0,0.35)] ring-1 ring-inset ring-white/5">
-                        <div className="relative h-64 w-full">
+                        <div className="relative h-64 w-full bg-black/20">
                           {imageUrl && (
                             <Image
                               src={imageUrl}
                               alt={t(item.titleKey)}
                               data-ai-hint={imageHint}
                               fill
-                              className="object-cover"
+                              className="object-contain"
                             />
                           )}
                         </div>
