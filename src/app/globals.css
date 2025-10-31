@@ -136,4 +136,7 @@
   .dark .link-pill {
       @apply ring-1 ring-inset ring-white/10;
   }
+  .project-block:hover .project-media-widget::before {
+      @apply inset-[-40%];
+  }
 }
