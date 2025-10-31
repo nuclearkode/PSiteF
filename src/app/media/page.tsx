@@ -4,6 +4,7 @@ import Footer from '@/components/layout/Footer';
 import { useI18n } from '@/hooks/useI18n';
 import Image from 'next/image';
 import Link from 'next/link';
+import { ArrowUpRight } from 'lucide-react';
 
 const mediaItems = [
   {
@@ -72,8 +73,8 @@ export default function MediaPage() {
                         <p className="text-muted-foreground mb-3 flex-grow" dangerouslySetInnerHTML={{ __html: t(item.descriptionKey) }}></p>
                         <div className="flex gap-3 flex-wrap">
                             {item.links.map(link => (
-                                <Link key={link.url} className="visit-link font-extrabold text-sm opacity-90 border border-white/10 p-2 rounded-xl transition-transform hover:-translate-y-0.5 hover:bg-white/5 whitespace-nowrap" href={link.url} target="_blank" rel="noopener">
-                                    {t(link.labelKey)} ↗
+                                <Link key={link.url} className="visit-link font-extrabold text-sm opacity-90 border border-white/10 p-2 rounded-xl transition-transform hover:-translate-y-0.5 hover:bg-white/5 whitespace-nowrap inline-flex items-center gap-1.5" href={link.url} target="_blank" rel="noopener">
+                                    {t(link.labelKey)} <ArrowUpRight className="w-4 h-4" />
                                 </Link>
                             ))}
                         </div>

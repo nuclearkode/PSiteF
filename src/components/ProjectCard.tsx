@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { ArrowUpRight } from 'lucide-react';
 
 type ProjectCardProps = {
   id: string;
@@ -40,7 +41,7 @@ export default function ProjectCard({ id, titleKey, descriptionKey, image1Id, im
         <div className="card-head flex items-baseline justify-between gap-3">
           <h3 className="uppercase tracking-[.06em] mb-1.5 text-accent-dark font-headline">{t(titleKey)}</h3>
           {link !== '#' && (
-            <a className="visit-link font-extrabold text-sm opacity-90 border border-white/10 p-2 rounded-xl transition-transform hover:-translate-y-0.5 hover:bg-white/5 whitespace-nowrap" href={link} target="_blank" rel="noopener">Check it out ↗</a>
+            <a className="visit-link font-extrabold text-sm opacity-90 border border-white/10 p-2 rounded-xl transition-transform hover:-translate-y-0.5 hover:bg-white/5 whitespace-nowrap inline-flex items-center gap-1.5" href={link} target="_blank" rel="noopener">Check it out <ArrowUpRight className="w-4 h-4" /></a>
           )}
         </div>
         <div className="prose prose-sm prose-headings:text-foreground/80 prose-h4:mb-1 prose-h4:mt-3 prose-p:my-1 prose-p:text-muted-foreground" dangerouslySetInnerHTML={{ __html: descriptionHtml }}></div>

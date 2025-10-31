@@ -3,6 +3,7 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { useI18n } from '@/hooks/useI18n';
 import Link from 'next/link';
+import { ArrowUpRight } from 'lucide-react';
 
 const resources = [
   { name: 'MATLAB & Simulink', href: 'https://www.mathworks.com/products/matlab.html' },
@@ -37,7 +38,7 @@ export default function ResourcesPage() {
                             rel="noopener"
                         >
                             {resource.name}
-                            <span>↗</span>
+                            <ArrowUpRight className="w-5 h-5" />
                         </Link>
                         ))}
                     </div>
