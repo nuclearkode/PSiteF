@@ -23,7 +23,7 @@ export default function Hero() {
             <h1 className="hero-title text-accent-dark uppercase font-headline font-bold text-[clamp(28px,4.5vw,48px)] leading-[.95] tracking-[.01em]">
                 Ahmed Badawy <br/>— Mechatronics & Robotics
             </h1>
-            <p className="mt-4 text-muted-foreground max-w-prose">{t('aboutP')}</p>
+            <p className="mt-4 text-muted-foreground max-w-prose" dangerouslySetInnerHTML={{ __html: t('aboutP') }}></p>
         </div>
         <div className="carousel-container min-h-[450px] lg:min-h-[550px] w-full relative order-1 lg:order-2">
             <div className="media absolute inset-0">

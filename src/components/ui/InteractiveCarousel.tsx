@@ -144,7 +144,7 @@ export default function InteractiveCarousel({ items }: InteractiveCarouselProps)
             <div
               key={item.id}
               className="carousel-item absolute w-[300px] h-[400px] left-[50%] top-[50%] -ml-[150px] -mt-[200px] transition-transform duration-500 ease-in-out"
-              style={{ transform: `rotateY(${angle}deg) translateZ(300px)` }}
+              style={{ transform: `rotateY(${angle}deg) translateZ(300px)`, backfaceVisibility: 'hidden' }}
             >
               <Link 
                 className="card block w-full h-full rounded-3xl bg-black/10 border border-white/20 grid grid-rows-[1fr_auto] overflow-hidden transition-all duration-300 ease-in-out"
