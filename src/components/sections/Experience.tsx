@@ -25,12 +25,7 @@ export default function Experience() {
       metaKey: 'exp4meta',
       titleKey: 'exp4title',
       descriptionKey: 'exp4p',
-    },
-    {
-      metaKey: 'exp5meta',
-      titleKey: 'exp5title',
-      descriptionKey: 'exp5p',
-    },
+    }
   ];
 
   return (

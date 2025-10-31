@@ -115,4 +115,13 @@
   .project-block .content-card {
     transition: all 0.3s ease-out;
   }
+  .header-scrolled {
+    @apply bg-background/80 backdrop-blur-sm shadow-lg;
+  }
+  .link-pill {
+      @apply ring-1 ring-inset ring-border;
+  }
+  .dark .link-pill {
+      @apply ring-1 ring-inset ring-white/10;
+  }
 }

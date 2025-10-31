@@ -7,11 +7,8 @@ const resources = [
   { name: 'SolidWorks', href: 'https://www.solidworks.com/' },
   { name: 'Altium Designer', href: 'https://www.altium.com/altium-designer' },
   { name: 'ROS (Robot Operating System)', href: 'https://www.ros.org/' },
-  { name: 'Onshape CAD', href: 'https://www.onshape.com/en/' },
   { name: 'GitHub', href: 'https://github.com/' },
-  { name: 'OpenCV', href: 'https://opencv.org/' },
   { name: 'IEEE Xplore', href: 'https://ieeexplore.ieee.org/' },
-  { name: 'Google Scholar', href: 'https://scholar.google.com/' },
 ];
 
 export default function Resources() {
@@ -27,7 +24,7 @@ export default function Resources() {
             {resources.map((resource, index) => (
               <Link
                 key={index}
-                className="link-pill flex items-center justify-between py-3 px-3.5 rounded-2xl bg-white/5 border-2 border-white/10 font-bold hover:bg-white/10"
+                className="link-pill flex items-center justify-between py-3 px-3.5 rounded-2xl bg-white/5 border-2 border-transparent font-bold hover:bg-white/10"
                 href={resource.href}
                 target="_blank"
                 rel="noopener"
