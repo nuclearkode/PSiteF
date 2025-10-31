@@ -31,7 +31,7 @@ export default function Experience() {
   return (
     <section 
       id="experience" 
-      className="relative z-[1] py-8 scroll-mt-24"
+      className="relative z-[1] py-8 pb-8 scroll-mt-20"
     >
       <div className="section-inner max-w-[1280px] mx-auto px-gutter">
         <h2 className="section-title font-headline text-[clamp(32px,6vw,64px)] tracking-[.06em] uppercase text-accent-dark mb-4 leading-none">{t('exp')}</h2>
