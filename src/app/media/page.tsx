@@ -7,29 +7,29 @@ import Link from 'next/link';
 
 const mediaItems = [
   {
-    title: 'Team Lead at SFU Robotics Club',
-    description: 'Leading a team of 10 in VEX robotics, guiding members, and managing projects.',
+    titleKey: 'media1_title',
+    descriptionKey: 'media1_desc',
     imageUrl: 'https://picsum.photos/seed/media1/600/400',
     imageHint: 'robotics club',
     link: '#',
   },
   {
-    title: '2nd Place in British Columbia',
-    description: 'Led my high school team to qualify for provincials for the first time in school history.',
+    titleKey: 'media2_title',
+    descriptionKey: 'media2_desc',
     imageUrl: 'https://picsum.photos/seed/media2/600/400',
     imageHint: 'robotics competition award',
     link: '#',
   },
   {
-    title: 'Featured in Engineering News',
-    description: 'An article covering our team\'s innovative approach to autonomous vehicle design.',
+    titleKey: 'media3_title',
+    descriptionKey: 'media3_desc',
     imageUrl: 'https://picsum.photos/seed/media3/600/400',
     imageHint: 'news article',
     link: '#',
   },
   {
-    title: 'Guest Speaker at Tech Conference',
-    description: 'Invited to speak about the future of mechatronics and AI integration.',
+    titleKey: 'media4_title',
+    descriptionKey: 'media4_desc',
     imageUrl: 'https://picsum.photos/seed/media4/600/400',
     imageHint: 'conference speaker',
     link: '#',
@@ -54,18 +54,18 @@ export default function MediaPage() {
                       <div className="relative h-64 w-full">
                         <Image
                           src={item.imageUrl}
-                          alt={item.title}
+                          alt={t(item.titleKey)}
                           data-ai-hint={item.imageHint}
                           fill
                           className="object-cover"
                         />
                       </div>
                       <div className="p-[clamp(18px,2.2vw,28px)]">
-                        <h3 className="uppercase tracking-[.06em] mb-1.5 text-accent-dark font-headline">{item.title}</h3>
-                        <p className="text-muted-foreground mb-3">{item.description}</p>
+                        <h3 className="uppercase tracking-[.06em] mb-1.5 text-accent-dark font-headline">{t(item.titleKey)}</h3>
+                        <p className="text-muted-foreground mb-3">{t(item.descriptionKey)}</p>
                         {item.link !== '#' && (
                           <Link className="visit-link font-extrabold text-sm opacity-90 border border-white/10 p-2 rounded-xl transition-transform hover:-translate-y-0.5 hover:bg-white/5 whitespace-nowrap" href={item.link} target="_blank" rel="noopener">
-                            Read More ↗
+                            {t('readMore')}
                           </Link>
                         )}
                       </div>

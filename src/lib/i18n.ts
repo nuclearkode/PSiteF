@@ -20,6 +20,7 @@ export const I18N = {
     openPdf: 'Resume',
     download: 'Download Resume',
     copyright: '© 2025 Ahmed Badawy',
+    readMore: 'Read More ↗',
 
     pmarine_t: 'Marine Vehicle Design and Development',
     pmarine_d: '<h4>What</h4><p>An ongoing project to design and develop a marine vehicle for underwater exploration and environmental monitoring, focusing on marine conservation challenges.</p><h4>How</h4><p>I am designing a Buck Converter for power management and developing a software architecture using ROS 2 Jazzy. This involves selecting appropriate sensors, designing power systems for marine environments, and proposing node structures with EKF/UKF filtering mechanisms, utilizing tools like SolidWorks and various microcontrollers.</p><h4>Result</h4><p>The anticipated outcome is a functional marine vehicle capable of autonomous navigation and hull cleaning of large ships, contributing to cost-effective ship operations and reduced fuel consumption. This project is significantly enhancing my skills in underwater robotics, power management, and sensor integration.</p>',
@@ -50,7 +51,16 @@ export const I18N = {
     
     exp4meta: 'Sep 2021 – Dec 2021',
     exp4title: 'Mechatronics Team Lead, Alpha Secondary',
-    exp4p: 'Led a team to a 2nd place rank in British Columbia, qualifying the school for provincials for the first time. Employed metal fabrication, electrical, and mechanical skills to create custom parts under a tight deadline after successfully recruiting a skilled team.'
+    exp4p: 'Led a team to a 2nd place rank in British Columbia, qualifying the school for provincials for the first time. Employed metal fabrication, electrical, and mechanical skills to create custom parts under a tight deadline after successfully recruiting a skilled team.',
+
+    media1_title: 'Team Lead at SFU Robotics Club',
+    media1_desc: 'Leading a team of 10 in VEX robotics, guiding members, and managing projects.',
+    media2_title: '2nd Place in British Columbia',
+    media2_desc: 'Led my high school team to qualify for provincials for the first time in school history.',
+    media3_title: 'Featured in Engineering News',
+    media3_desc: "An article covering our team's innovative approach to autonomous vehicle design.",
+    media4_title: 'Guest Speaker at Tech Conference',
+    media4_desc: 'Invited to speak about the future of mechatronics and AI integration.'
   },
   fr: {
     title: 'Ahmed Badawy | Portfolio Mécatronique & Robotique',
@@ -73,6 +83,7 @@ export const I18N = {
     openPdf: 'CV',
     download: 'Télécharger le CV',
     copyright: '© 2025 Ahmed Badawy',
+    readMore: 'Lire la suite ↗',
     
     pmarine_t: 'Conception et développement de véhicules marins',
     pmarine_d: '<h4>Quoi</h4><p>Un projet en cours pour concevoir et développer un véhicule marin pour l\'exploration sous-marine et la surveillance environnementale, axé sur les défis de la conservation marine.</p><h4>Comment</h4><p>Je conçois un convertisseur Buck pour la gestion de l\'alimentation et développe une architecture logicielle utilisant ROS 2 Jazzy. Cela implique de sélectionner des capteurs appropriés, de concevoir des systèmes d\'alimentation pour les environnements marins et de proposer des structures de nœuds avec des mécanismes de filtrage EKF/UKF, en utilisant des outils comme SolidWorks et divers microcontrôleurs.</p><h4>Résultat</h4><p>Le résultat attendu est un véhicule marin fonctionnel capable de navigation autonome et de nettoyage de coque de grands navires, contribuant à des opérations rentables et à une consommation de carburant réduite. Ce projet améliore considérablement mes compétences en robotique sous-marine, gestion de l\'énergie et intégration de capteurs.</p>',
@@ -103,7 +114,16 @@ export const I18N = {
 
     exp4meta: 'Sep 2021 – Déc 2021',
     exp4title: 'Chef d\'équipe Mécatronique, Alpha Secondary',
-    exp4p: 'Direction d\'une équipe qui s\'est classée 2e en Colombie-Britannique, qualifiant l\'école pour les provinciaux pour la première fois. Utilisation de compétences en fabrication métallique, électrique et mécanique pour créer des pièces personnalisées dans des délais serrés.'
+    exp4p: 'Direction d\'une équipe qui s\'est classée 2e en Colombie-Britannique, qualifiant l\'école pour les provinciaux pour la première fois. Utilisation de compétences en fabrication métallique, électrique et mécanique pour créer des pièces personnalisées dans des délais serrés.',
+
+    media1_title: 'Chef d\'équipe au SFU Robotics Club',
+    media1_desc: 'Diriger une équipe de 10 personnes en robotique VEX, guider les membres et gérer les projets.',
+    media2_title: '2e place en Colombie-Britannique',
+    media2_desc: "A mené mon équipe de lycée à se qualifier pour les provinciaux pour la première fois de l'histoire de l'école.",
+    media3_title: 'Présenté dans les nouvelles de l\'ingénierie',
+    media3_desc: "Un article sur l'approche innovante de notre équipe en matière de conception de véhicules autonomes.",
+    media4_title: 'Conférencier invité à la conférence technique',
+    media4_desc: 'Invité à parler de l\'avenir de la mécatronique et de l\'intégration de l\'IA.'
   },
 };
 
