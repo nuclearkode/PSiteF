@@ -6,10 +6,10 @@ export default function QuickLinks() {
   const { t } = useI18n();
 
   const tiles = [
-    { href: '/media', labelKey: 'media' },
-    { href: '/#about', labelKey: 'abt' },
-    { href: '/#projects', labelKey: 'proj' },
     { href: '/resources', labelKey: 'res' },
+    { href: '/media', labelKey: 'media' },
+    { href: '/#projects', labelKey: 'proj' },
+    { href: '/#about', labelKey: 'abt' },
   ];
 
   return (

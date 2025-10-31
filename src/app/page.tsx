@@ -15,8 +15,8 @@ export default function Home() {
         <Hero />
         <QuickLinks />
         <Projects />
-        <Experience />
         <About />
+        <Experience />
       </main>
       <Footer />
     </>
