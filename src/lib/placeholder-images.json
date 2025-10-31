@@ -3,7 +3,7 @@
     {
       "id": "hero-avatar",
       "description": "Portrait of Ahmed Badawy",
-      "imageUrl": "https://i.imgur.com/7p32341.jpeg",
+      "imageUrl": "https://i.postimg.cc/VNrmxJZN/Profile-Arman.png",
       "imageHint": "portrait person"
     },
     {
@@ -33,62 +33,62 @@
     {
       "id": "carousel-pcb",
       "description": "STM32 PCB",
-      "imageUrl": "https://images.unsplash.com/photo-1631375937044-6dd5beac01d2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjaXJjdWl0JTIwYm9hcmR8ZW58MHx8fHwxNzYxNzg3MTc5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1631375937044-6dd5beac01d2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjaXJjdWl0JTIwYm9hcmR8ZW58MHx8fHwxNzYxNzg3MTc5fDA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "circuit board"
     },
     {
       "id": "carousel-encoder",
       "description": "Encoder",
-      "imageUrl": "https://images.unsplash.com/photo-1576020363294-ab5dca00b6f8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtZWNoYW5pY2FsJTIwcGFydHxlbnwwfHx8fDE3NjE4NzM4MDh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1576020363294-ab5dca00b6f8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtZWNoYW5pY2FsJTIwcGFydHxlbnwwfHx8fDE3NjE4NzM4MDh8MA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "mechanical part"
     },
     {
       "id": "proj-marine-3d",
-      "description": "Marine vehicle 3D model",
-      "imageUrl": "https://images.unsplash.com/photo-1651611243377-2c15b94ad613?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHwzZCUyMHJlbmRlcnxlbnwwfHx8fDE3NjE4NzM1NDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "3d render"
+      "description": "AI diagram workspace (mind-map UI) — overview with orange/blue nodes and AI Suggestions panel.",
+      "imageUrl": "https://i.postimg.cc/hvRw3j61/Screenshot-2025-10-30-234527.png",
+      "imageHint": "mind-map ui"
     },
     {
       "id": "proj-marine-2d",
-      "description": "Marine vehicle schematic",
-      "imageUrl": "https://images.unsplash.com/photo-1712697236422-cf48f06547f1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxzY2hlbWF0aWMlMjBibHVlcHJpbnR8ZW58MHx8fHwxNzYxODczODA4fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "schematic blueprint"
+      "description": "AI diagram workspace (focused “Deep Stall Phenomena”) — smaller mind-map with suggestions.",
+      "imageUrl": "https://i.postimg.cc/qqHYZRSY/Screenshot-2025-10-30-234556.png",
+      "imageHint": "mind-map deep-stall"
     },
     {
       "id": "proj-pcb-3d",
-      "description": "STM32 board render",
-      "imageUrl": "https://images.unsplash.com/photo-1697577418970-95d99b5a55cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjaXJjdWl0JTIwYm9hcmR8ZW58MHx8fHwxNzYxNzg3MTc5fDA&ixlib-rb-4.1.0&q=80&w=1080",
-      "imageHint": "circuit board"
+      "description": "Robot controller — PCB layout/wiring (top/bottom traces, connectors, power section).",
+      "imageUrl": "https://i.postimg.cc/d1ypBdH5/Screenshot-2025-10-30-234704.png",
+      "imageHint": "pcb layout"
     },
     {
       "id": "proj-pcb-2d",
-      "description": "STM32 schematic",
-      "imageUrl": "https://images.unsplash.com/photo-1758873268104-965363987972?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8ZGlhZ3JhbSUyMHNjaGVtYXRpY3xlbnwwfHx8fDE3NjE4NzM4MDh8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "diagram schematic"
+      "description": "Robot controller — full schematic (MCU, power, motor drivers, I/O).",
+      "imageUrl": "https://i.postimg.cc/mkWq6DJS/Screenshot-2025-10-30-234632.png",
+      "imageHint": "controller schematic"
     },
     {
       "id": "proj-8051-3d",
-      "description": "DC motor controller",
-      "imageUrl": "https://images.unsplash.com/photo-1723730741647-caaea47ac90f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxkYyUyMG1vdG9yfGVufDB8fHx8MTc2MTg3MzgwOHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "dc motor"
+      "description": "Breadboard 7-segment display prototype — DIP switches, transistors, dev board harness.",
+      "imageUrl": "https://i.postimg.cc/x8V7FCBQ/Screenshot-2025-10-30-234330.png",
+      "imageHint": "breadboard prototype"
     },
     {
       "id": "proj-8051-2d",
-      "description": "7-segment multiplexing schematic",
-      "imageUrl": "https://images.unsplash.com/photo-1730578726303-c9a4c0ae02c4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxlbGVjdHJvbmljcyUyMGRpYWdyYW18ZW58MHx8fHwxNzYxODczODA4fDA&ixlib-rb-4.1.0&q=80&w=1080",
-      "imageHint": "electronics diagram"
+      "description": "Controller & 3×7-segment schematic — microcontroller, drivers, buzzer/motor, display wiring.",
+      "imageUrl": "https://i.postimg.cc/FzXqnRwN/Screenshot-2025-10-30-234302.png",
+      "imageHint": "7-segment schematic"
     },
     {
       "id": "proj-labview-3d",
-      "description": "Automation line",
-      "imageUrl": "https://images.unsplash.com/photo-1717386255773-a456c611dc4e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxmYWN0b3J5JTIwYXV0b21hdGlvbnxlbnwwfHx8fDE3NjE4NzM4MDh8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "factory automation"
+      "description": "HMI/control panel mockup — dashboard with sensor indicators, start/stop, gauge, slider.",
+      "imageUrl": "https://i.postimg.cc/2yNJX6gD/Screenshot-2025-10-30-234407.png",
+      "imageHint": "hmi dashboard"
     },
     {
       "id": "proj-labview-2d",
-      "description": "GUI flows",
-      "imageUrl": "https://images.unsplash.com/photo-1545112969-bdd91ef544c7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxmbG93Y2hhcnQlMjB1aXxlbnwwfHx8fDE3NjE4NzM4MDl8MA&ixlib-rb-4.1.0&q=80&w=1080",
-      "imageHint": "flowchart ui"
+      "description": "Conveyor sorting robot rig — bench-top assembly with belts, rollers, sensors, wiring.",
+      "imageUrl": "https://i.postimg.cc/GtnNS2VV/Screenshot-2025-10-30-234442.png",
+      "imageHint": "conveyor robot"
     },
     {
       "id": "proj-plow-3d",
@@ -104,15 +104,21 @@
     },
     {
       "id": "about-avatar",
-      "description": "Portrait of Ahmed Badawy",
-      "imageUrl": "https://i.imgur.com/7p32341.jpeg",
+      "description": "Professional headshot — portrait on white background.",
+      "imageUrl": "https://i.postimg.cc/VNrmxJZN/Profile-Arman.png",
       "imageHint": "man portrait"
     },
     {
       "id": "newspaper-feature",
-      "description": "Newspaper feature about robotics competition",
-      "imageUrl": "https://i.postimg.cc/Z5Cp9LDY/article-67cbb46913b4d9-26568410.jpg",
+      "description": "Newspaper clipping (VEX robotics team) — students with robot 502Z; competition prep.",
+      "imageUrl": "https://i.postimg.cc/YSGM5vDG/Screenshot-2025-10-30-224806.png",
       "imageHint": "newspaper article"
+    },
+    {
+      "id": "coaching-competition",
+      "description": "Coaching at robotics competition — group photo with students and adults.",
+      "imageUrl": "https://i.postimg.cc/s2QskMHv/Coaching-at-Competition.png",
+      "imageHint": "robotics competition"
     }
   ]
 }

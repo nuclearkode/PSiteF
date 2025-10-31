@@ -36,8 +36,7 @@ const mediaItems = [
   {
     titleKey: 'media_coach_title',
     descriptionKey: 'media_coach_desc',
-    imageUrl: 'https://picsum.photos/seed/media4/600/400',
-    imageHint: 'robotics coaching students',
+    imageId: 'coaching-competition',
     links: [
         { url: 'https://kavosh.ai', labelKey: 'official_website' },
     ],
@@ -97,3 +96,5 @@ export default function MediaPage() {
     </>
   );
 }
+
+    
