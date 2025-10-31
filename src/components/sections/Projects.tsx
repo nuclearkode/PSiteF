@@ -1,9 +1,6 @@
 'use client';
 import { useI18n } from '@/hooks/useI18n';
 import ProjectCard from '@/components/ProjectCard';
-import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
-import { cn } from '@/lib/utils';
-import { useRef } from 'react';
 
 const projectsData = [
   {
@@ -50,17 +47,11 @@ const projectsData = [
 
 export default function Projects() {
   const { t } = useI18n();
-  const sectionRef = useRef<HTMLElement>(null);
-  const isVisible = useIntersectionObserver(sectionRef, { threshold: 0.1 });
 
   return (
     <section 
       id="projects" 
-      ref={sectionRef}
-      className={cn(
-        "relative z-[1] pt-20 pb-10 opacity-0 transition-opacity duration-700 ease-out",
-        isVisible && "animate-fade-in-up"
-      )}
+      className="relative z-[1] pt-20 pb-10"
     >
       <div className="section-inner max-w-[1280px] mx-auto px-gutter">
         <h2 className="section-title font-headline text-[clamp(32px,6vw,64px)] tracking-[.06em] uppercase text-accent-dark mb-4 leading-none">{t('projects')}</h2>
